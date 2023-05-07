@@ -1,0 +1,249 @@
+.body{
+    margin: 0px;
+    padding: 0;
+    width: auto;
+    height: 100vh;
+    background-color: #cc9696;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+main{ 
+    margin-top: 50px;
+    width: 850px;
+    height: 480px;
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 10px 10px 5px dimgray;
+}
+
+.sections{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0px 0px;
+}
+
+.sections > * {
+    padding: 10px;
+    flex: 1 100%;
+  }
+
+.section01{
+    border-radius: 25px 0px 0px 25px;
+}
+.section02{
+    border-radius: 0px 25px 25px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    padding-top: 80px;
+}
+
+.section01,.section02{
+    height: 480px;
+}
+
+h1, h3, span{
+    font-family: 'Nunito', sans-serif;
+}
+
+h5, h2, label, p, a{
+    font-family: Arial, 'Helvetica', sans-serif;
+}
+
+section.section01{
+    background: #850404;
+    color: aliceblue;
+}
+
+ .section01 header{
+    text-align: start;
+    
+ }
+ .section01 div{
+    text-align: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+ }
+section.section02{
+    background: white;
+    color: black;
+    text-align: center;
+}
+#title-login{
+    color: #720202;
+}
+#label-reset-password{
+    color: #850404;
+    opacity: 47%;
+    text-decoration: none;
+}
+footer{
+    margin-top: 25px;
+}
+footer p{
+    font-size: larger;
+    text-shadow: 1px 1px 2px black, 0 0 25px black;
+}
+img{
+    margin: 10px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50px 50px 50px 50px;
+}
+
+header span{
+    font-size: xx-large;
+}
+.form {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+/*
+.inputContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+  }
+
+.input label{
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #DADCE0;
+    border-radius: 7px;
+    padding: 0 20px;
+    outline: none;
+    background: none;
+    z-index: 1;
+}
+  */
+  /* Style the inputs */
+.inputContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 20%;
+    width: 70%;
+    margin-bottom: 17px;
+  }
+  .inputContainers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 10%;
+    width: 70%;
+    padding-bottom: 40px;
+    color: darkgray;
+  }
+.input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #DADCE0;
+    border-left: 6px solid #720202;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 0 20px;
+    outline: none;
+    background: none;
+    z-index: 1;
+  }
+/* Hide the placeholder texts (a) */
+::placeholder {
+    color: transparent;
+ }
+
+/* Styling text labels */
+
+.label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 0 4px;
+    background-color: white;
+    color: #DADCE0;
+    font-size: 16px;
+    transition: 0.5s;
+    z-index: 0;
+}
+  .submitBtn {
+    border: none;
+    background-color: #720202;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .submitBtn:hover {
+    background-color: #720202;
+    transform: translateY(-2px);
+  }
+
+  .input:focus + .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+    color: #720202;
+    
+  }
+
+  .input:focus {
+    border: 3px solid #720202;
+  }
+
+  .input:not(:placeholder-shown)+ .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .inputSubmit{
+    width: 70%;
+    height: 20%;
+  }
+.checkbox label,.a-password a{
+    font-size: small;
+}
+.checkbox{
+    width: 70%;
+    text-align: left;
+}
+.a-password{
+    width: 50%;
+    text-align: right;
+}
+.checklabel{
+    text-align: left;
+}
+.label-reset-password{
+    width: 100%;
+}
