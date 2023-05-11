@@ -3,7 +3,7 @@
   <div class="modal-dialog modal-lg modal-dialog-centered small">
     <div class="modal-content">
       <div class="modal-header btn-light">
-        <h5 class="modal-title fw-bold" id="detalles_label">Detalles de: <span class="h6"><?= $_GET["servicio"]?></span> - Canal: <span class="h6"><?= $link?></span> - ID:<span class="h6"><?= $r['id']?></span></h5>
+        <h5 class="modal-title fw-bold titulo-modal" id="detalles_label">Detalles de: <span class="h6"><?= $_GET["servicio"]?></span> - Canal: <span class="h6"><?php if (isset($link)){ echo $link; }else{ echo "Todos"; } ?></span> - ID:<span class="h6"> <?= $r['id']?></span></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">

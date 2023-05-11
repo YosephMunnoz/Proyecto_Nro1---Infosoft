@@ -24,5 +24,8 @@ td{
 .bton{
     font-family: 'Poppins', sans-serif;
     background-color: #000041;
-
+}
+.titulo-modal{
+    font-family: 'Poppins', sans-serif;
+    color: #000041;
 }
