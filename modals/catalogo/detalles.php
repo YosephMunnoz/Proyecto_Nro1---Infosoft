@@ -1,9 +1,9 @@
 <!-- Modal -->
-<div class="modal fade" id="DetailsDonationModal" tabindex="-1" aria-labelledby="DetailsDonationModal_Label" aria-hidden="true">
+<div class="modal fade" id="detalles<?= $r['id']?>" tabindex="-1" aria-labelledby="detalles_label" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered small">
     <div class="modal-content">
       <div class="modal-header btn-light">
-        <h5 class="modal-title fw-bold" id="DetailsDonationModal_Label" style="color: #850404;">Details Donors</h5>
+        <h5 class="modal-title fw-bold" id="detalles_label">Detalles de: <span class="h6"><?= $_GET["servicio"]?></span> - Canal: <span class="h6"><?= $link?></span> - ID:<span class="h6"><?= $r['id']?></span></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
