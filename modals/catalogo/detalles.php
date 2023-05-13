@@ -10,115 +10,113 @@
         <form action="">
             <div class="row g-5">
                 <div class="mb-2 col-2">
-                    <label for="Donor_No" style="color: #850404;">Donor Nº</label>
-                    <input type="text" class="form-control form-control-sm" id="Donor_No" aria-label="Disabled input" disabled readonly>
+                    <label for="nivel_criticidad" class="titulo-modal ">Nivel de Criticidad</label>
+                    <input type="text" class="form-control form-control-sm" value="<?=$r['nivel_criticidad'];?>" aria-label="Disabled input" disabled readonly>
                 </div>
                 <div class="mb-2 col-2">
-                    <label for="Donation_No" style="color: #850404;">Donation Nº</label>
-                    <input type="text" class="form-control form-control-sm" id="Donation_No" aria-label="Disabled input" disabled readonly>
+                    <label for="Área" class="titulo-modal fs-5">Área</label>
+                    <input type="text" class="form-control form-control-sm" value="<?=$r['area'];?>" aria-label="Disabled input" disabled readonly>
                 </div>
                 <div class="mb-2 col-2" >
-                    <label for="donationDate" style="color: #850404;">Donation Date</label>
+                    <label for="donationDate" class="titulo-modal fs-5">Donation Date</label>
                     <input type="text" class="form-control form-control-sm" id="donationDate" aria-label="Disabled input" disabled readonly> 
                 </div>
                 <div class="mb-2 col-2">
-                    <label for="donationTime" style="color: #850404;">Donation Time</label>
+                    <label for="donationTime" class="titulo-modal fs-5">Donation Time</label>
                     <input type="text" class="form-control form-control-sm" id="donationTime" aria-label="Disabled input" disabled readonly>
                 </div>
-                <div class="mb-2 col-4">
-                    <label for="document" style="color: #850404;">Document</label>
-                    <input type="text" class="form-control form-control-sm" id="document" aria-label="Disabled input" disabled readonly>
+                <div class="mb-2 col-2">
+                    <label for="donationTime" class="titulo-modal fs-5">Donation Time</label>
+                    <input type="text" class="form-control form-control-sm" id="donationTime" aria-label="Disabled input" disabled readonly>
+                </div>
+                <div class="mb-2 col-2">
+                    <label for="donationTime" class="titulo-modal fs-5">Donation Time</label>
+                    <input type="text" class="form-control form-control-sm" id="donationTime" aria-label="Disabled input" disabled readonly>
                 </div>
             </div>
-            <div class="row g-4">
+            <div class="row g-5">
                 <div class="mb-2 col-6">
-                    <label for="nameUser" style="color: #850404;">Name</label>
+                    <label for="nameUser" class="titulo-modal fs-5">Name</label>
                     <input type="text" class="form-control form-control-sm" id="nameUser" aria-label="Disabled input" disabled readonly>
                 </div>
                 <div class="mb-2 col-2">
-                    <label for="Sexo" style="color: #850404;">Sexo</label>
+                    <label for="Sexo" class="titulo-modal fs-5">Sexo</label>
                     <input type="text" class="form-control form-control-sm" id="Sexo" aria-label="Disabled input" disabled readonly>
                 </div>
                 <div class="mb-2 col-2">
-                    <label for="dateOfBirth" style="color: #850404;">Date of Birth</label>
+                    <label for="dateOfBirth" class="titulo-modal fs-5">Date of Birth</label>
                     <input type="text" class="form-control form-control-sm" id="dateOfBirth" aria-label="Disabled input" disabled readonly>
                 </div>
                 <div class="mb-2 col-2">
-                    <label for="age" style="color: #850404;">Age</label>
+                    <label for="age" class="titulo-modal fs-5">Age</label>
                     <input type="text" class="form-control form-control-sm" id="age" aria-label="Disabled input" disabled readonly>
                 </div>
             </div>
-            <div class="row g-3">
+            <div class="row g-5">
                 <div class="mb-2 col-4">
-                    <label for="mailUser" style="color: #850404;">Mail</label>
+                    <label for="mailUser" class="titulo-modal fs-5">Mail</label>
                     <input type="text" class="form-control form-control-sm" id="mailUser" aria-label="Disabled input" disabled readonly>
                 </div>
                 <div class="mb-2 col-4">
-                    <label for="phoneUser" style="color: #850404;">Phone</label>
+                    <label for="phoneUser" class="titulo-modal fs-5">Phone</label>
                     <input type="text" class="form-control form-control-sm" id="phoneUser" aria-label="Disabled input" disabled readonly>
                 </div>
                 <div class="mb-2 col-4">
-                    <label for="Suitable" style="color: #850404;">Suitable</label>
+                    <label for="Suitable" class="titulo-modal fs-5">Suitable</label>
                     <input type="text" class="form-control form-control-sm" id="Suitable" aria-label="Disabled input" disabled readonly>
                 </div>  
             </div>
-            <div class="row g-1">
-                <div class="mb-2 col-12">
-                    <label for="directionUser" style="color: #850404;">Direction</label>
-                    <textarea name="" id="directionUser" class="form-control form-control-sm" aria-label="Disabled input" disabled readonly></textarea>
-                </div>
-            </div>
-            <div class="row g-4">
+            <div class="row g-5">
                 <div class= "mb-2 col-2">
-                    <label for="typeBlood" style="color: #850404;">Type Blood</label>
+                    <label for="typeBlood" class="titulo-modal fs-5">Type Blood</label>
                         <input class="form-control form-control-sm" type="text" id="typeBlood" aria-label="Disabled input" disabled readonly>
                 </div>
                 <div class= "mb-2 col-2">
-                <label for="subTypeBlood" style="color: #850404;">Sub Type Blood</label>
+                <label for="subTypeBlood" class="titulo-modal fs-5">Sub Type Blood</label>
                         <input class="form-control form-control-sm" type="text" id="suTypeBlood" aria-label="Disabled input" disabled readonly>
                 </div>
                 <div class= "mb-2 col-4">
-                    <label for="typeDonation" style="color: #850404;">Type Donation</label>
+                    <label for="typeDonation" class="titulo-modal fs-5">Type Donation</label>
                     <input type="text" class="form-control form-control-sm" id="typeDonation" aria-label="Disabled input" disabled readonly>
                 </div>
                 <div class= "mb-2 col-4">
-                <label for="typeDonor" style="color: #850404;">Type Donor</label>
+                <label for="typeDonor" class="titulo-modal fs-5">Type Donor</label>
                     <input type="text" class="form-control form-control-sm" id="typeDonor" aria-label="Disabled input" disabled readonly>
                 </div>
             </div>
-            <div class="row g-6">
+            <div class="row g-5">
                     <div class= "mb-2 col-2">
-                        <label for="Height" style="color: #850404;">Height</label>
+                        <label for="Height" class="titulo-modal fs-5">Height</label>
                         <input type="text" class="form-control form-control-sm" id="Height" aria-label="Disabled input" disabled readonly>
                     </div>
                     <div class= "mb-2 col-2">
-                        <label for="Weight" style="color: #850404;">Weight</label>
+                        <label for="Weight" class="titulo-modal fs-5">Weight</label>
                         <input type="text" class="form-control form-control-sm" id="Weight" aria-label="Disabled input" disabled readonly>
                     </div>
                     <div class= "mb-2 col-2">
-                        <label for="Pulse" style="color: #850404;">Pulse</label>
+                        <label for="Pulse" class="titulo-modal fs-5">Pulse</label>
                         <input type="text" class="form-control form-control-sm" id="Pulse" aria-label="Disabled input" disabled readonly>
                     </div>
                     <div class= "mb-2 col-2">
-                        <label for="diastolic" style="color: #850404;">Diastolic</label>
+                        <label for="diastolic" class="titulo-modal fs-5">Diastolic</label>
                         <input type="text" class="form-control form-control-sm" id="diastolic" aria-label="Disabled input" disabled readonly>
                     </div>
                     <div class= "mb-2 col-2">
-                        <label for="systolic" style="color: #850404;">Systolic</label>
+                        <label for="systolic" class="titulo-modal fs-5">Systolic</label>
                         <input type="text" class="form-control form-control-sm" id="systolic" aria-label="Disabled input" disabled readonly>
                     </div>
                     <div class= "mb-2 col-2">
-                        <label for="Hemoglobin" style="color: #850404;">Hemoglobin</label>
+                        <label for="Hemoglobin" class="titulo-modal fs-5">Hemoglobin</label>
                         <input type="text" class="form-control form-control-sm" id="Hemoglobin" aria-label="Disabled input" disabled readonly>
                     </div>
                 </div>
-                <div class="row g-2">
+                <div class="row g-5">
                     <div class="mb-2 col-6">
-                        <label for="Diagnosis" style="color: #850404;">Diagnosis</label>
+                        <label for="Diagnosis" class="titulo-modal fs-5">Diagnosis</label>
                         <input type="text" class="form-control form-control-sm" id="Diagnosis" aria-label="Disabled input" disabled readonly>
                     </div>
                     <div class="mb-2 col-6">
-                        <label for="Treatment" style="color: #850404;">Treatment</label>
+                        <label for="Treatment" class="titulo-modal fs-5">Treatment</label>
                         <input type="text" class="form-control form-control-sm" id="Treatment" aria-label="Disabled input" disabled readonly>
                     </div>
                 </div>

@@ -78,7 +78,7 @@
                                                 <td class="text-primary"><?= $r['weblogic']; ?></td>
                                                 <td class="text-primary"><?= $r['ubicacion']; ?></td>
                                                 <td style="width: 8%;">
-                                                    <a role="button" class="d-none d-sm-inline-block btn btn-warning btn-sm" data-bs-toggle="modal" href="#detalles<?= $r['id']?>">
+                                                    <a role="button" class="d-none d-sm-inline-block btn btn-warning btn-sm icon-t" data-bs-toggle="modal" href="#detalles<?= $r['id']?>">
                                                         <i class="fas fa-plus fa-sm text-white" ></i> Detalles
                                                     </a>
                                                 </td>
