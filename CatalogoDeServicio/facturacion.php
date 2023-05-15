@@ -22,7 +22,7 @@
                     <div class="container-fluid">
                         <div class="row mb-3">
                             <div class="col-5 d-flex justify-content-between">
-                                <a href="../../Infosoft3/CatalogoDeServicio/facturacion.php?servicio=FACTURACION&value=1&canal=DNS" class="d-none d-sm-inline-block btn btn-primary btn-sm text-white">
+                                <a href="../../Infosoft3/CatalogoDeServicio/facturacion.php?servicio=FACTURACION&value=1&canal=prepago" class="d-none d-sm-inline-block btn btn-primary btn-sm text-white">
                                     <i class="fa-solid fa-wallet fa-lg text-white"></i> PREPAGO
                                 </a>
                                 <a href="../../Infosoft3/CatalogoDeServicio/facturacion.php?servicio=FACTURACION&value=1&canal=ICS" class="d-none d-sm-inline-block btn btn-primary btn-sm text-white">

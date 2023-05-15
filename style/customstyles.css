@@ -28,4 +28,8 @@ td{
 .titulo-modal{
     font-family: 'Poppins', sans-serif;
     color: #000041;
+    font-size: medium;
+}
+.colors{
+    background-color: orangered;
 }

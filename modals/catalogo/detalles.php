@@ -1,6 +1,6 @@
 <!-- Modal -->
 <div class="modal fade" id="detalles<?= $r['id']?>" tabindex="-1" aria-labelledby="detalles_label" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered small">
+  <div class="modal-dialog modal-xl modal-dialog-centered small">
     <div class="modal-content">
       <div class="modal-header btn-light">
         <h5 class="modal-title fw-bold titulo-modal" id="detalles_label">Detalles de: <span class="h6"><?= $_GET["servicio"]?></span> - Canal: <span class="h6"><?php if (isset($link)){ echo $link; }else{ echo "Todos"; } ?></span> - ID:<span class="h6"> <?= $r['id']?></span></h5>
@@ -8,126 +8,110 @@
       </div>
       <div class="modal-body">
         <form action="">
-            <div class="row g-5">
-                <div class="mb-2 col-2">
+            <div class="row g-4">
+                <div class="mb-2 col-3">
                     <label for="nivel_criticidad" class="titulo-modal ">Nivel de Criticidad</label>
-                    <input type="text" class="form-control form-control-sm" value="<?=$r['nivel_criticidad'];?>" aria-label="Disabled input" disabled readonly>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['nivel_criticidad'];?>" aria-label="Disabled input" disabled readonly>
                 </div>
-                <div class="mb-2 col-2">
-                    <label for="Área" class="titulo-modal fs-5">Área</label>
-                    <input type="text" class="form-control form-control-sm" value="<?=$r['area'];?>" aria-label="Disabled input" disabled readonly>
+                <div class="mb-2 col-3">
+                    <label for="Área" class="titulo-modal">Área</label>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['area'];?>" aria-label="Disabled input" disabled readonly>
                 </div>
-                <div class="mb-2 col-2" >
-                    <label for="donationDate" class="titulo-modal fs-5">Donation Date</label>
-                    <input type="text" class="form-control form-control-sm" id="donationDate" aria-label="Disabled input" disabled readonly> 
+                <div class="mb-2 col-3" >
+                    <label for="Servidor" class="titulo-modal">Servidor</label>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['servidor'];?>" aria-label="Disabled input" disabled readonly> 
                 </div>
-                <div class="mb-2 col-2">
-                    <label for="donationTime" class="titulo-modal fs-5">Donation Time</label>
-                    <input type="text" class="form-control form-control-sm" id="donationTime" aria-label="Disabled input" disabled readonly>
-                </div>
-                <div class="mb-2 col-2">
-                    <label for="donationTime" class="titulo-modal fs-5">Donation Time</label>
-                    <input type="text" class="form-control form-control-sm" id="donationTime" aria-label="Disabled input" disabled readonly>
-                </div>
-                <div class="mb-2 col-2">
-                    <label for="donationTime" class="titulo-modal fs-5">Donation Time</label>
-                    <input type="text" class="form-control form-control-sm" id="donationTime" aria-label="Disabled input" disabled readonly>
+                <div class="mb-2 col-3">
+                    <label for="ip" class="titulo-modal">Dirección IP</label>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['ip'];?>" aria-label="Disabled input" disabled readonly>
                 </div>
             </div>
-            <div class="row g-5">
-                <div class="mb-2 col-6">
-                    <label for="nameUser" class="titulo-modal fs-5">Name</label>
-                    <input type="text" class="form-control form-control-sm" id="nameUser" aria-label="Disabled input" disabled readonly>
+            <div class="row g-4">
+                <div class="mb-2 col-3">
+                    <label for="Hostname" class="titulo-modal">Hostname</label>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['hostname'];?>" aria-label="Disabled input" disabled readonly>
                 </div>
                 <div class="mb-2 col-2">
-                    <label for="Sexo" class="titulo-modal fs-5">Sexo</label>
-                    <input type="text" class="form-control form-control-sm" id="Sexo" aria-label="Disabled input" disabled readonly>
+                    <label for="Sistema Operativo" class="titulo-modal">Sistema Operativo</label>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['sistema_operativo'];?>" aria-label="Disabled input" disabled readonly>
+                </div>
+                <div class="mb-2 col-5">
+                    <label for="Versión de S.O" class="titulo-modal">Versión de S.O</label>
+                    <input type="text" class="form-control form-control-sm text-center pequeño" value="<?=$r['vs_so'];?>" aria-label="Disabled input" disabled readonly>
                 </div>
                 <div class="mb-2 col-2">
-                    <label for="dateOfBirth" class="titulo-modal fs-5">Date of Birth</label>
-                    <input type="text" class="form-control form-control-sm" id="dateOfBirth" aria-label="Disabled input" disabled readonly>
+                    <label for="Base de datos" class="titulo-modal">Base de datos</label>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['bbdd'];?>" aria-label="Disabled input" disabled readonly>
+                </div>       
+            </div>
+            <div class="row g-4">
+                <div class="mb-2 col-3">
+                    <label for="Manejador de BD" class="titulo-modal">Manejador de BD</label>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['dbms'];?>" aria-label="Disabled input" disabled readonly>
+                </div>
+                <div class="mb-2 col-3">
+                    <label for="Version de BD" class="titulo-modal">Versión de BD</label>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['vs_bd'];?>" aria-label="Disabled input" disabled readonly>
+                </div>
+                <div class="mb-2 col-3">
+                    <label for="bus" class="titulo-modal">Bus</label>
+                    <input type="text" class="form-control form-control-sm text-center pequeño" value="<?=$r['bus'];?>" aria-label="Disabled input" disabled readonly>
+                </div>
+                <div class="mb-2 col-3">
+                    <label for="capa tuxedo" class="titulo-modal">Capa Tuxedo</label>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['capa_tuxedo'];?>" aria-label="Disabled input" disabled readonly>
+                </div>       
+            </div>
+            <div class="row g-5">
+                <div class="mb-2 col-3">
+                    <label for="WebLogic" class="titulo-modal">WebLogic</label>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['weblogic'];?>" aria-label="Disabled input" disabled readonly>
+                </div>
+                <div class="mb-2 col-3">
+                    <label for="F5 Comunicaciones" class="titulo-modal">F5 Comunicaciones</label>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['f5_comunicaciones'];?>" aria-label="Disabled input" disabled readonly>
+                </div>
+                <div class="mb-2 col-3">
+                    <label for="ip f5" class="titulo-modal">IP F5</label>
+                    <input type="text" class="form-control form-control-sm text-center pequeño" value="<?=$r['ip_f5'];?>" aria-label="Disabled input" disabled readonly>
+                </div>
+                <div class="mb-2 col-3">
+                    <label for="Puerto F5" class="titulo-modal">Port F5</label>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['port_f5'];?>" aria-label="Disabled input" disabled readonly>
+                </div>       
+            </div>
+            <div class="row g-5">
+                <div class="mb-2 col-3">
+                    <label for="Pools Vs" class="titulo-modal">Pools/Vs</label>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['pools_vs'];?>" aria-label="Disabled input" disabled readonly>
+                </div>
+                <div class="mb-2 col-3">
+                    <label for="otros servicios asociados" class="titulo-modal">Otros Servicios Asociados</label>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['otro_servicio_asociado'];?>" aria-label="Disabled input" disabled readonly>
+                </div>
+                <div class="mb-2 col-3">
+                    <label for="Ubicacion" class="titulo-modal">Ubicación</label>
+                    <input type="text" class="form-control form-control-sm text-center pequeño" value="<?=$r['ubicacion'];?>" aria-label="Disabled input" disabled readonly>
                 </div>
                 <div class="mb-2 col-2">
-                    <label for="age" class="titulo-modal fs-5">Age</label>
-                    <input type="text" class="form-control form-control-sm" id="age" aria-label="Disabled input" disabled readonly>
+                    <label for="rack" class="titulo-modal">Rack</label>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['rack'];?>" aria-label="Disabled input" disabled readonly>
+                </div>
+                <div class="mb-2 col-1">
+                    <label for="fila" class="titulo-modal">fila</label>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['fila'];?>" aria-label="Disabled input" disabled readonly>
+                </div>         
+            </div>
+            <div class="row g-1">
+            <div class="mb-2 col-12">
+                <label for="observacion general" class="titulo-modal">Observación General</label>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['observacion_general'];?>" aria-label="Disabled input" disabled readonly>
                 </div>
             </div>
-            <div class="row g-5">
-                <div class="mb-2 col-4">
-                    <label for="mailUser" class="titulo-modal fs-5">Mail</label>
-                    <input type="text" class="form-control form-control-sm" id="mailUser" aria-label="Disabled input" disabled readonly>
-                </div>
-                <div class="mb-2 col-4">
-                    <label for="phoneUser" class="titulo-modal fs-5">Phone</label>
-                    <input type="text" class="form-control form-control-sm" id="phoneUser" aria-label="Disabled input" disabled readonly>
-                </div>
-                <div class="mb-2 col-4">
-                    <label for="Suitable" class="titulo-modal fs-5">Suitable</label>
-                    <input type="text" class="form-control form-control-sm" id="Suitable" aria-label="Disabled input" disabled readonly>
-                </div>  
-            </div>
-            <div class="row g-5">
-                <div class= "mb-2 col-2">
-                    <label for="typeBlood" class="titulo-modal fs-5">Type Blood</label>
-                        <input class="form-control form-control-sm" type="text" id="typeBlood" aria-label="Disabled input" disabled readonly>
-                </div>
-                <div class= "mb-2 col-2">
-                <label for="subTypeBlood" class="titulo-modal fs-5">Sub Type Blood</label>
-                        <input class="form-control form-control-sm" type="text" id="suTypeBlood" aria-label="Disabled input" disabled readonly>
-                </div>
-                <div class= "mb-2 col-4">
-                    <label for="typeDonation" class="titulo-modal fs-5">Type Donation</label>
-                    <input type="text" class="form-control form-control-sm" id="typeDonation" aria-label="Disabled input" disabled readonly>
-                </div>
-                <div class= "mb-2 col-4">
-                <label for="typeDonor" class="titulo-modal fs-5">Type Donor</label>
-                    <input type="text" class="form-control form-control-sm" id="typeDonor" aria-label="Disabled input" disabled readonly>
-                </div>
-            </div>
-            <div class="row g-5">
-                    <div class= "mb-2 col-2">
-                        <label for="Height" class="titulo-modal fs-5">Height</label>
-                        <input type="text" class="form-control form-control-sm" id="Height" aria-label="Disabled input" disabled readonly>
-                    </div>
-                    <div class= "mb-2 col-2">
-                        <label for="Weight" class="titulo-modal fs-5">Weight</label>
-                        <input type="text" class="form-control form-control-sm" id="Weight" aria-label="Disabled input" disabled readonly>
-                    </div>
-                    <div class= "mb-2 col-2">
-                        <label for="Pulse" class="titulo-modal fs-5">Pulse</label>
-                        <input type="text" class="form-control form-control-sm" id="Pulse" aria-label="Disabled input" disabled readonly>
-                    </div>
-                    <div class= "mb-2 col-2">
-                        <label for="diastolic" class="titulo-modal fs-5">Diastolic</label>
-                        <input type="text" class="form-control form-control-sm" id="diastolic" aria-label="Disabled input" disabled readonly>
-                    </div>
-                    <div class= "mb-2 col-2">
-                        <label for="systolic" class="titulo-modal fs-5">Systolic</label>
-                        <input type="text" class="form-control form-control-sm" id="systolic" aria-label="Disabled input" disabled readonly>
-                    </div>
-                    <div class= "mb-2 col-2">
-                        <label for="Hemoglobin" class="titulo-modal fs-5">Hemoglobin</label>
-                        <input type="text" class="form-control form-control-sm" id="Hemoglobin" aria-label="Disabled input" disabled readonly>
-                    </div>
-                </div>
-                <div class="row g-5">
-                    <div class="mb-2 col-6">
-                        <label for="Diagnosis" class="titulo-modal fs-5">Diagnosis</label>
-                        <input type="text" class="form-control form-control-sm" id="Diagnosis" aria-label="Disabled input" disabled readonly>
-                    </div>
-                    <div class="mb-2 col-6">
-                        <label for="Treatment" class="titulo-modal fs-5">Treatment</label>
-                        <input type="text" class="form-control form-control-sm" id="Treatment" aria-label="Disabled input" disabled readonly>
-                    </div>
-                </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
-        <label for="">
-            <input type="submit" class="btn btn-sm text-white" value="Save" style="background: #850404;">
-        </label>
-        <input type="hidden">
+        <button type="button" class="btn btn-outline-primary btn-sm" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
