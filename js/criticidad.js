@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     var filas = document.getElementById('colors');
-    for (var i=0; i < filas.length; i++){
+    console.log(filas);
+    console.log(filas.innerText)
+    console.log(filas.length)
+    
+    for (var i=0; i < filas.rows.length; i++){
+        let filas = tabla.rows[i];
         if(filas[i].innerText == "ALTO"){
             filas[i].className = "colors text-primary";
             console.log(filas[i].className);
