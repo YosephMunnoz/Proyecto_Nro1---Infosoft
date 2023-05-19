@@ -11,7 +11,7 @@
     </div>
     <div class="card-body small">
         <div class="table-responsive">
-            <table class="table table-sm table-hover table-striped text-center align-middle table-borderless display compact" width="100%" cellspacing="0" id="dataTable">
+            <table class="table table-sm table-hover table-striped text-center align-middle table-borderless display compact tabla" width="100%" cellspacing="0" id="dataTable">
             <thead class="table-light">
                 <tr>
                     <th white="0.5px">id</th>
@@ -32,7 +32,7 @@
                 <tr>
                     <?php  if(isset($_GET["value"]) == null){ echo "No existen Datos Actualmente!"; }else { foreach ($result as $r) { ?>
                     <th class="text-primary align-middle " white="0.5px"><?= $r['id']?></th>
-                    <td scope="col" class="table-danger text-primary align-middle" white="4px" id="colors"><?= $r['nivel_criticidad']; ?></td>
+                    <td scope="col" class="table-danger text-primary align-middle" white="4px" id="colors"><?= $r['nivel_criticidad'];?></td>
                     <td class="text-primary align-middle"><?= $r['servidor']; ?></td>
                     <td class="text-primary align-middle"><?= $r['hostname']; ?></td>
                     <td class="text-primary align-middle"><?= $r['ip']; ?></td>
