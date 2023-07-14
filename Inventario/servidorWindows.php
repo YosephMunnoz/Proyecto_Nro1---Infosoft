@@ -16,28 +16,26 @@
                     <?php {
                         include ('../home/navbar.php');
                         include ('../modals/settings_session.php');
-                        include ('../conexion/catalogo_filtros.php');
+                        include ('../conexion/inventario_filtros.php');
                     ?>
                     <!-- Bloque de botones filtro -->
                     <div class="container-fluid">
                         <div class="row mb-3">
                             <div class="col-6 d-flex justify-content-between">
-                                <a href="../../Infosoft3/CatalogoDeServicio/empresariales.php?servicio=EMPRESARIALES&value=1&canal=DNS" class="d-none d-sm-inline-block btn btn-primary btn-sm text-white">
-                                    <i class="fa-solid fa-network-wired fa-lg text-white"></i> DNS
+                                <a href="../../Infosoft3/Inventario/servidorWindows.php?nombre=Servidores Windows&servidor=WINDOWS&value=3&entorno=PRODUCCION&tipo=SERVIDOR" class="d-none d-sm-inline-block btn btn-primary btn-sm text-white">
+                                    <i class="fas fa-cogs fa-lg text-white"></i> Producción
                                 </a>
-                                <a href="../../Infosoft3/CatalogoDeServicio/empresariales.php?servicio=EMPRESARIALES&value=1&canal=M-CONTENIDO" class="d-none d-sm-inline-block btn btn-primary btn-sm text-white">
-                                <i class="fa-solid fa-window-maximize fa-lg text-white"></i> M-CONTENIDO
+                                <a href="../../Infosoft3/Inventario/servidorWindows.php?nombre=Servidores Windows&servidor=WINDOWS&value=3&entorno=TESTING&tipo=SERVIDOR" class="d-none d-sm-inline-block btn btn-primary btn-sm text-white">
+                                <i class="fa-solid fa-cubes fa-lg text-white"></i> Testing
                                 </a>
-                                <a href="../../Infosoft3/CatalogoDeServicio/empresariales.php?servicio=EMPRESARIALES&value=1&canal=PORTAL SENIAT" class="d-none d-sm-inline-block  btn btn-primary btn-sm text-white">
-                                <i class="fa-regular fa-window-restore fa-lg text-white"></i> PORTAL SENIAT
+                                <a href="../../Infosoft3/Inventario/servidorWindows.php?nombre=Servidores Windows&servidor=WINDOWS&value=3&entorno=DESARROLLO&tipo=SERVIDOR" class="d-none d-sm-inline-block  btn btn-primary btn-sm text-white">
+                                <i class="fa-solid fa-code fa-lg text-white"></i> Desarrollo
                                 </a>
-                                <a href="../../Infosoft3/CatalogoDeServicio/empresariales.php?servicio=EMPRESARIALES&value=1&canal=REMEDY" class="d-none d-sm-inline-block  btn btn-primary btn-sm text-white">
-                                <i class="fa-solid fa-laptop-code fa-lg text-white"></i> REMEDY
+                                <a href="../../Infosoft3/Inventario/servidorWindows.php?nombre=Servidores Windows&servidor=WINDOWS&value=3&entorno=IMPLEMENTACION&tipo=SERVIDOR" class="d-none d-sm-inline-block  btn btn-primary btn-sm text-white">
+                                <i class="fa-solid fa-check-double fa-lg text-white"></i> Implementación
                                 </a>
-                            </div>
-                            <div class="col-6 d-flex justify-content-end">
-                                <a href="../../Infosoft3/CatalogoDeServicio/empresariales.php?servicio=EMPRESARIALES&value=2" class="d-none d-sm-inline-block btn btn-warning btn-sm text-white">
-                                <i class="fa-solid fa-box-archive text-white fa-lg"></i> Servicio
+                                <a href="../../Infosoft3/Inventario/servidorWindows.php?nombre=Servidores Windows&servidor=WINDOWS&value=3&entorno=APAGADO&tipo=SERVIDOR" class="d-none d-sm-inline-block  btn btn-primary btn-sm text-white">
+                                <i class="fa-solid fa-power-off fa-lg text-white"></i> Apagados
                                 </a>
                             </div>
                         </div>

@@ -12,7 +12,7 @@
             <div class="row g-4">
                 <div class="mb-2 col-3">
                     <label for="nivel_criticidad" class="titulo-modal ">Nivel de Criticidad</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['nivel_criticidad'];?>" aria-label="Disabled input" disabled readonly>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['nivel_criticidad'];?>" aria-label="Disabled input" disabled readonly id="input" >
                 </div>
                 <div class="mb-2 col-3">
                     <label for="Área" class="titulo-modal">Área</label>
@@ -126,7 +126,7 @@
             <div class="row g-4">
                 <div class="mb-2 col-3">
                     <label for="nivel_criticidad" class="titulo-modal ">Nivel de Criticidad</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['nivel_criticidad'];?>" aria-label="Disabled input" disabled readonly>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['nivel_criticidad'];?>" aria-label="Disabled input" disabled readonly id="input">
                 </div>
                 <div class="mb-2 col-3">
                     <label for="Área" class="titulo-modal">Área</label>
@@ -240,7 +240,7 @@
             <div class="row g-4">
                 <div class="mb-2 col-3">
                     <label for="nivel_criticidad" class="titulo-modal ">Nivel de Criticidad</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['nivel_criticidad'];?>" aria-label="Disabled input" disabled readonly>
+                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['nivel_criticidad'];?>" aria-label="Disabled input" disabled readonly id="input">
                 </div>
                 <div class="mb-2 col-3">
                     <label for="Área" class="titulo-modal">Área</label>

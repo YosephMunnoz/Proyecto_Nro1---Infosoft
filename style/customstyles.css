@@ -33,3 +33,12 @@ td{
 .colors{
     background-color: orangered;
 }
+.linear{
+    background-color: #000041;
+}
+.celda-td{
+    height: 10px;
+}
+div #fisicos,#virtuales,#linux,#windows {
+    display: none;
+}

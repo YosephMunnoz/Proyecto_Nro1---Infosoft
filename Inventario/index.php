@@ -15,8 +15,7 @@
                 <div id="content">
                     <?php
                         include '../home/navbar.php';
-                        include '../CatalogoDeServicio/catalogo.php';
-                        include '../modals/settings_session.php';
+                        include '../Inventario/resumen.php';
                     ?>
                 </div>
                     <!-- End of Main Content -->

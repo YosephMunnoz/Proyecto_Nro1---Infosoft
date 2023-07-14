@@ -7,7 +7,7 @@
    <div class="card shadow">
       <div class="card-body small">
          <div class="table-responsive">
-            <table class="table table-sm table-hover table-striped text-center align-middle table-borderless display compact" width="100%" cellspacing="0" id="dataTable">
+            <table class="table table-sm table-hover table-striped text-center align-middle table-borderless display compact tabla" width="100%" cellspacing="0" id="dataTable">
                <thead class="table-light">
                   <tr>
                      <th white="0.5px">id</th>

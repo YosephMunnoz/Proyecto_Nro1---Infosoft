@@ -30,11 +30,11 @@
 
     <!-- Nav Item - catalogo Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseQueries" aria-expanded="true" aria-controls="collapseQueries">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#catalogo" aria-expanded="true" aria-controls="catalogo">
             <i class="fas fa-book"></i>
             <span>Catálogo de Servicios</span>
         </a>
-        <div id="collapseQueries" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="catalogo" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Servicios y/o Aplicativos:</h6>
                 <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/activacion.php?servicio=ACTIVACION">Activación</a>
@@ -75,10 +75,25 @@
     
     <!-- Nav Item - Inventario -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#inventario" aria-expanded="true" aria-controls="inventario">
             <i class="fas fa-fw fa-box-open"></i>
             <span>Inventario</span>
         </a>
+        <div id="inventario" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Resumen:</h6>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/index.php">Resumen</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Inventario CCO:</h6>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/servidorFisico.php?nombre=">Servidores Fisicos</a>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/servidorVirtual.php?nombre=">Servidores Virtuales</a>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/servidorUnix.php?nombre=">Servidores Unix</a>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/servidorWindows.php?nombre=">Servidores Windows</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">General:</h6>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/general.php?nombre=">Inventario CCO</a>
+            </div>
+        </div>
     </li>
 
     <!-- Nav Item - Otros -->
