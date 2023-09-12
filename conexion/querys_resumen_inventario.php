@@ -23,5 +23,5 @@ $result_2 = mysqli_query($conex, $sql_2);
 $sql_3 = "SELECT * FROM `servidores_windows`";
 $result_3 = mysqli_query($conex, $sql_3);
 
-
+mysqli_close($conex);
 ?>

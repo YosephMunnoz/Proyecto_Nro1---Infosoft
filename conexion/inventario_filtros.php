@@ -37,6 +37,7 @@ if (isset($_GET['value'])) {
 		$result = mysqli_query($conex, $sql);
 		print_r(mysqli_error($conex));
 	}
+	mysqli_close($conex);
 }
 ?>
 

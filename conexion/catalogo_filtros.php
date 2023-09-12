@@ -23,6 +23,7 @@ if (isset($_GET['value'])) {
 		print_r(mysqli_error($conex));
 	break;
 	}
+	mysqli_close($conex);
 }
 ?>
 

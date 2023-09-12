@@ -40,7 +40,7 @@
                 <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/activacion.php?servicio=ACTIVACION">Activación</a>
                 <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/empresariales.php?servicio=EMPRESARIALES">Empresariales</a>
                 <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/facturacion.php?servicio=FACTURACION">Facturación</a>
-                <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/recargas.php?servicio=RECARGAS">Recargas</a>
+                <a type="button" class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/recargas.php?servicio=RECARGAS" onclick="recargas();">Recargas</a>
                 <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/tasacion.php?servicio=TASACION">Tasación</a>
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">General:</h6>

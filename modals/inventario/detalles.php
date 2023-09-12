@@ -59,7 +59,7 @@
                             <input type="text" class="form-control form-control-sm text-center" value="<?=$r['cluster_hypervisor'];?>" aria-label="Disabled input" disabled readonly>
                         </div>
                     </div>
-                    <div class="row g-2">
+                    <!-- <div class="row g-2">
                         <div class="mb-2 col-6">
                             <label for="Versión de S.O" class="titulo-modal">Conciliación de Seguridad</label>
                             <input type="text" class="form-control form-control-sm text-center pequeño" value="<?=$r['conciliacion_seguridad'];?>" aria-label="Disabled input" disabled readonly>
@@ -68,7 +68,7 @@
                             <label for="Base de datos" class="titulo-modal">Estatus de Seguridad</label>
                             <input type="text" class="form-control form-control-sm text-center" value="<?=$r['estatus_seguridad'];?>" aria-label="Disabled input" disabled readonly>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="row g-3">
                         <div class="mb-2 col-4">
