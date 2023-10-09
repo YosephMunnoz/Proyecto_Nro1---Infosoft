@@ -1,6 +1,9 @@
 <?php
 include "conex.php";
 $serv = $_GET["servicio"];
+$sql = "SELECT id, nivel_criticidad FROM cs_nivel_de_criticidad";
+	$var = mysqli_query($conex, $sql);
+	print_r(mysqli_error($conex));
 if (isset($_GET['value'])) {
 	switch ($_GET['value']) {
 		case '1':

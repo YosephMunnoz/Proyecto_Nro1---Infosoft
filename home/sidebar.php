@@ -1,3 +1,7 @@
+<?php
+    if(isset($_SESSION['userId']) && $_SESSION['typeId'] == 1) 
+    {
+?>
 <!-- Sidebar -->
 <ul class="navbar-nav sidebar sidebar-dark accordion small lateral" id="accordionSidebar">
         
@@ -37,11 +41,11 @@
         <div id="catalogo" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Servicios y/o Aplicativos:</h6>
-                <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/activacion.php?servicio=ACTIVACION">Activación</a>
-                <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/empresariales.php?servicio=EMPRESARIALES">Empresariales</a>
-                <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/facturacion.php?servicio=FACTURACION">Facturación</a>
-                <a type="button" class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/recargas.php?servicio=RECARGAS" onclick="recargas();">Recargas</a>
-                <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/tasacion.php?servicio=TASACION">Tasación</a>
+                <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=ACTIVACION">Activación</a>
+                <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=EMPRESARIALES">Empresariales</a>
+                <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=FACTURACION">Facturación</a>
+                <a type="button" class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=RECARGAS" onclick="recargas();">Recargas</a>
+                <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=TASACION">Tasación</a>
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">General:</h6>
                 <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?value=3&servicio=0">Catálogo</a>
@@ -51,7 +55,7 @@
     
     <!-- Nav Item - administrativos -->
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="#">
             <i class="fas fa-fw fa-poll"></i>
             <span>Administrativos</span>
         </a>
@@ -59,7 +63,7 @@
 
     <!-- Nav Item - areas -->
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="#">
             <i class="fas fa-fw fa-layer-group"></i>
             <span>Áreas</span>
         </a>
@@ -116,10 +120,22 @@
         
     <!-- Nav Item - Settings-User -->
     <li class="nav-item">
-        <a class="nav-link" href="../settings_users/index.php" >
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#settingsUser" aria-expanded="true" aria-controls="settingsUser" >
             <i class="fas fa-fw fa-users"></i>
             <span>Users</span>
         </a>
+        <div id="settingsUser" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Creación:</h6>
+                <a class="collapse-item" href="../../Infosoft3/settings_users/index.php?option=1">Crear usuarios</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Configuraciones:</h6>
+                <a class="collapse-item" href="../../Infosoft3/settings_users/index.php?option=2">Crear de cargos</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Reporte:</h6>
+                <a class="collapse-item" href="../../Infosoft3/settings_users/index.php?option=3">Listado de usuarios</a>
+            </div>
+        </div>
     </li>
 
     <!-- Divider -->
@@ -133,3 +149,121 @@
         
 </ul>
 <!-- End of Sidebar -->  
+<?php } else { ?>
+    <!-- Sidebar -->
+<ul class="navbar-nav sidebar sidebar-dark accordion small lateral" id="accordionSidebar">
+        
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <div class="sidebar-brand-icon">
+                <i class="bi bi-database-exclamation text-warning"></i>
+            </div>
+            <h6 class="sidebar-brand-text mx-2 mt-3 lateral fw-bolder">I<span class="text-warning">S</span>  Knowledge</h6>
+        </a>
+        
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+    
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link" href="../home/index.php">
+                <i class="fas fa-home"></i>
+                <span>Inicio</span>
+            </a>
+        </li>
+    
+        <!-- Divider -->
+        <hr class="sidebar-divider bg-white">
+        
+        <!-- Heading -->
+        <div class="sidebar-heading small"> 
+            Información
+        </div>
+    
+        <!-- Nav Item - catalogo Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#catalogo" aria-expanded="true" aria-controls="catalogo">
+                <i class="fas fa-book"></i>
+                <span>Catálogo de Servicios</span>
+            </a>
+            <div id="catalogo" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Servicios y/o Aplicativos:</h6>
+                    <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=ACTIVACION">Activación</a>
+                    <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=EMPRESARIALES">Empresariales</a>
+                    <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=FACTURACION">Facturación</a>
+                    <a type="button" class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=RECARGAS" onclick="recargas();">Recargas</a>
+                    <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=TASACION">Tasación</a>
+                    <div class="collapse-divider"></div>
+                    <h6 class="collapse-header">General:</h6>
+                    <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?value=3&servicio=0">Catálogo</a>
+                </div>
+            </div>
+        </li>
+        
+        <!-- Nav Item - administrativos -->
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="fas fa-fw fa-poll"></i>
+                <span>Administrativos</span>
+            </a>
+        </li>
+    
+        <!-- Nav Item - areas -->
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="fas fa-fw fa-layer-group"></i>
+                <span>Áreas</span>
+            </a>
+        </li>    
+        
+        <!-- Nav Item - Documentos -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#">
+                <i class="fas fa-fw fa-folder-open"></i>
+                <span>Documentos</span>
+            </a>
+        </li>
+        
+        <!-- Nav Item - Inventario -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#inventario" aria-expanded="true" aria-controls="inventario">
+                <i class="fas fa-fw fa-box-open"></i>
+                <span>Inventario</span>
+            </a>
+            <div id="inventario" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Resumen:</h6>
+                    <a class="collapse-item" href="../../Infosoft3/Inventario/index.php">Resumen</a>
+                    <div class="collapse-divider"></div>
+                    <h6 class="collapse-header">Inventario CCO:</h6>
+                    <a class="collapse-item" href="../../Infosoft3/Inventario/servidorFisico.php?nombre=">Servidores Fisicos</a>
+                    <a class="collapse-item" href="../../Infosoft3/Inventario/servidorVirtual.php?nombre=">Servidores Virtuales</a>
+                    <a class="collapse-item" href="../../Infosoft3/Inventario/servidorUnix.php?nombre=">Servidores Unix</a>
+                    <a class="collapse-item" href="../../Infosoft3/Inventario/servidorWindows.php?nombre=">Servidores Windows</a>
+                    <div class="collapse-divider"></div>
+                    <h6 class="collapse-header">General:</h6>
+                    <a class="collapse-item" href="../../Infosoft3/Inventario/general.php?nombre=">Inventario CCO</a>
+                </div>
+            </div>
+        </li>
+    
+        <!-- Nav Item - Otros -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#">
+                <i class="fas fa-fw fa-bookmark"></i>
+                <span>Otros</span>
+            </a>
+        </li>
+    
+    
+        
+        <!-- Divider -->
+        <hr class="sidebar-divider bg-white">
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+    </ul>
+    <!-- End of Sidebar --> 
+    <?php }?>
