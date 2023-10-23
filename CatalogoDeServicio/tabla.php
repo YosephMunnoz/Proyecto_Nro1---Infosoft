@@ -68,6 +68,7 @@
                 <caption>Listado del Catalogo de Servicio</caption>
             </tbody>
             </table>
+            
         </div>
     </div>
 </div>

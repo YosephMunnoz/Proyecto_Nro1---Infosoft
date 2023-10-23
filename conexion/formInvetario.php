@@ -4,8 +4,13 @@
     session_start();
     $creationUser = "$_SESSION[user]";
     $updateUser = "$_SESSION[user]";
-    $servicio = $_POST['servicio'];
-    $canal = $_POST['canal'];
+    $inventario = $_POST['inventario'];
+    $nombre = $_POST['nombre'];
+    $servidor = $_POST['servidor'];
+    $value = $_POST['value'];
+    $entorno = $_POST['entorno'];
+    $tipo =$_POST['tipo'];
+    $id = $_POST['id'];
         if(isset($_SESSION['user']))
         {
             if(isset($_POST['regis']))
@@ -131,7 +136,7 @@
                                 echo
                                 "<script> 
                                     alert('El registro fue actualizado');
-                                    location.assign('../CatalogoDeServicio/index.php?servicio=$servicio&value=1&canal=$canal');
+                                    location.assign('../CatalogoDeServicio/index.php?servicio=$inventario&value=1&canal=$canal');
                                 </script>";
                             }
                             else
@@ -149,26 +154,26 @@
                         if(isset($_POST['id']) && $_POST['id']!='')
                         {
                             
-                            $sql = "SELECT * FROM catalogo_de_servicio WHERE id = '$id'";
+                            $sql = "SELECT * FROM inventario_cco WHERE id_codigo = '$id'";
                             $valida = mysqli_query($conex, $sql);
                             $num = mysqli_num_rows($valida);
                             if($num == 1 )
                             {
-                                $delete = "DELETE FROM catalogo_de_servicio WHERE id = '$id' ";
+                                $delete = "DELETE FROM inventario_cco WHERE id_codigo = '$id' ";
                                 $result = mysqli_query($conex, $delete);
                                 if($result)
                                 {
                                     echo
                                     "<script> 
                                         alert('El Cargo Fue Eliminado exitosamente');
-                                         location.assign('../CatalogoDeServicio/index.php?servicio=$servicio&value=1&canal=$canal');
+                                         location.assign('../Inventario/index.php?inventario=$inventario&nombre=$nombre&servidor=$servidor&value=$value&entorno=$entorno&tipo=$tipo');
                                     </script>";
                                 }
                                 else
                                 {
                                     echo "<script> 
                                             alert('ha ocurrido un error, vuelva a intentar');
-                                             location.assign('../CatalogoDeServicio/index.php?servicio=$servicio&value=1&canal=$canal');
+                                            location.assign('../Inventario/index.php?inventario=$inventario&nombre=$nombre&servidor=$servidor&value=$value&entorno=$entorno&tipo=$tipo');
                                         </script>";
                                 }      
                             }

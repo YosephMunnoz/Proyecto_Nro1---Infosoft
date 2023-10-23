@@ -20,6 +20,11 @@
                             if(isset($_GET['servicio']));
                                     switch ($_GET['servicio']) 
                                     {
+                                        case 'REGISTRAR':
+                                            //pagina de TASACION
+                                            // require_once ('../CatalogoDeServicio/REGISTRAR.php');
+                                            include '../home/mantenimiento.php';
+                                        break;
                                         case 'ACTIVACION':
                                             // Pagina Activación
                                             include ('../CatalogoDeServicio/activacion.php');
@@ -29,11 +34,11 @@
                                             require_once ('../CatalogoDeServicio/empresariales.php');
                                         break;
                                         case 'FACTURACION':
-                                            //pagina de Empresariales
+                                            //pagina de FACTURACION
                                             require_once ('../CatalogoDeServicio/facturacion.php');
                                         break;
                                         case 'RECARGAS':
-                                            //pagina de Empresariales
+                                            //pagina de RECARGAS
                                             require_once ('../CatalogoDeServicio/recargas.php');
                                         break;
                                         case 'TASACION':
@@ -41,7 +46,7 @@
                                             require_once ('../CatalogoDeServicio/tasacion.php');
                                         break;
                                         case '0':
-                                            //pagina de Empresariales
+                                            //pagina de catalogo
                                             require_once ('../CatalogoDeServicio/catalogo.php');
                                         break;
                                     }

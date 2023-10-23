@@ -14,9 +14,44 @@
             <div id="content-wrapper" class="d-flex flex-column">
                 <!-- Main Content -->
                 <div id="content">
-                    <?php
-                        include '../home/navbar.php';
-                        include '../Inventario/resumen.php';
+                <?php
+                        include ('../home/navbar.php');
+                        include ('../conexion/inventario_filtros.php');
+                            if(isset($_GET['inventario']));
+                                    switch ($_GET['inventario']) 
+                                    {
+                                        case 'Registrar':
+                                            //pagina de Registrar
+                                            // require_once ('../CatalogoDeServicio/REGISTRAR.php');
+                                            include '../home/mantenimiento.php';
+                                        break;
+                                        case 'Resumen':
+                                            // Pagina Inventarios Resumen
+                                            include ('../inventario/resumen.php');
+                                        break;
+                                        case 'Servidores Fisicos':
+                                            //pagina de Inventario servidores fisicos
+                                            require_once ('../inventario/servidorFisico.php');
+                                        break;
+                                        case 'Servidores Virtuales':
+                                            //pagina de Inventario servidores virtuales
+                                            require_once ('../inventario/servidorVirtual.php');
+                                        break;
+                                        case 'Servidores Unix':
+                                            //pagina de Inventario servidores unix
+                                            require_once ('../inventario/servidorUnix.php');
+                                        break;
+                                        case 'Servidores Windows':
+                                            //pagina de Inventario servidores windows
+                                            require_once ('../inventario/servidorWindows.php');
+                                        break;
+                                        case '0':
+                                            //pagina de Inventario servidores general
+                                            require_once ('../inventario/general.php');
+                                        break;
+                                    }
+                        // include '../home/main.php';
+                        include '../modals/users/settings_session.php'
                     ?>
                 </div>
                     <!-- End of Main Content -->
@@ -31,24 +66,9 @@
             <i class="fas fa-angle-up"></i>
         </a>
 
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">¿Desea cerrar sesión?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Seleccione "Cerrar sesión" a continuación si está listo para finalizar su sesión actual.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="../conexion/signOut.php">Logout</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+         <!-- Logout Modal-->
+         <?php
+            include ('../modals/users/signOut.php');
+        ?>
     </body>
 </html>

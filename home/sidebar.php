@@ -6,7 +6,7 @@
 <ul class="navbar-nav sidebar sidebar-dark accordion small lateral" id="accordionSidebar">
         
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../home/index.php">
         <div class="sidebar-brand-icon">
             <i class="bi bi-database-exclamation text-warning"></i>
         </div>
@@ -40,6 +40,8 @@
         </a>
         <div id="catalogo" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Registrar nuevos items:</h6>
+                <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=REGISTRAR">Registrar</a>
                 <h6 class="collapse-header">Servicios y/o Aplicativos:</h6>
                 <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=ACTIVACION">Activación</a>
                 <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=EMPRESARIALES">Empresariales</a>
@@ -85,17 +87,19 @@
         </a>
         <div id="inventario" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Registrar nuevos items:</h6>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/index.php?inventario=Registrar&nombre=">Registrar</a>
                 <h6 class="collapse-header">Resumen:</h6>
-                <a class="collapse-item" href="../../Infosoft3/Inventario/index.php">Resumen</a>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/index.php?inventario=Resumen&nombre=">Resumen</a>
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">Inventario CCO:</h6>
-                <a class="collapse-item" href="../../Infosoft3/Inventario/servidorFisico.php?nombre=">Servidores Fisicos</a>
-                <a class="collapse-item" href="../../Infosoft3/Inventario/servidorVirtual.php?nombre=">Servidores Virtuales</a>
-                <a class="collapse-item" href="../../Infosoft3/Inventario/servidorUnix.php?nombre=">Servidores Unix</a>
-                <a class="collapse-item" href="../../Infosoft3/Inventario/servidorWindows.php?nombre=">Servidores Windows</a>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/index.php?inventario=Servidores Fisicos&nombre=">Servidores Fisicos</a>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/index.php?inventario=Servidores Virtuales&nombre=">Servidores Virtuales</a>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/index.php?inventario=Servidores Unix&nombre=">Servidores Unix</a>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/index.php?inventario=Servidores Windows&nombre=">Servidores Windows</a>
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">General:</h6>
-                <a class="collapse-item" href="../../Infosoft3/Inventario/general.php?nombre=">Inventario CCO</a>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/index.php?inventario=0&nombre=">Inventario CCO</a>
             </div>
         </div>
     </li>
@@ -154,7 +158,7 @@
 <ul class="navbar-nav sidebar sidebar-dark accordion small lateral" id="accordionSidebar">
         
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../home/index.php">
             <div class="sidebar-brand-icon">
                 <i class="bi bi-database-exclamation text-warning"></i>
             </div>
@@ -231,21 +235,21 @@
                 <i class="fas fa-fw fa-box-open"></i>
                 <span>Inventario</span>
             </a>
-            <div id="inventario" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Resumen:</h6>
-                    <a class="collapse-item" href="../../Infosoft3/Inventario/index.php">Resumen</a>
-                    <div class="collapse-divider"></div>
-                    <h6 class="collapse-header">Inventario CCO:</h6>
-                    <a class="collapse-item" href="../../Infosoft3/Inventario/servidorFisico.php?nombre=">Servidores Fisicos</a>
-                    <a class="collapse-item" href="../../Infosoft3/Inventario/servidorVirtual.php?nombre=">Servidores Virtuales</a>
-                    <a class="collapse-item" href="../../Infosoft3/Inventario/servidorUnix.php?nombre=">Servidores Unix</a>
-                    <a class="collapse-item" href="../../Infosoft3/Inventario/servidorWindows.php?nombre=">Servidores Windows</a>
-                    <div class="collapse-divider"></div>
-                    <h6 class="collapse-header">General:</h6>
-                    <a class="collapse-item" href="../../Infosoft3/Inventario/general.php?nombre=">Inventario CCO</a>
-                </div>
+             <div id="inventario" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Resumen:</h6>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/index.php?inventario=Resumen&nombre=">Resumen</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Inventario CCO:</h6>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/index.php?inventario=Servidores Fisicos&nombre=">Servidores Fisicos</a>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/index.php?inventario=Servidores Virtuales&nombre=">Servidores Virtuales</a>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/index.php?inventario=Servidores Unix&nombre=">Servidores Unix</a>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/index.php?inventario=Servidores Windows&nombre=">Servidores Windows</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">General:</h6>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/index.php?inventario=0&nombre=">Inventario CCO</a>
             </div>
+        </div>
         </li>
     
         <!-- Nav Item - Otros -->

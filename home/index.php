@@ -16,7 +16,7 @@
                 <div id="content">
                     <?php
                         include '../home/navbar.php';
-                        include '../home/main.php';
+                        include '../home/mantenimiento.php';
                         include '../modals/users/settings_session.php'
                     ?>
                 </div>
