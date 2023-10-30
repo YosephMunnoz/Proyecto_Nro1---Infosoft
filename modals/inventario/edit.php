@@ -4,7 +4,7 @@
     <div class="modal-content">
       <div class="modal-header btn-light">
       <?php  if($_GET["value"] == 1 || $_GET["value"] == 2 || $_GET["value"] == 3){?>
-        <h5 class="modal-title fw-bold titulo-modal" id="edit_label">Detalles de: <span class="h6"><?= $_GET["servicio"]?></span> - Canal: <span class="h6"><?php if (isset($link)){ echo $link; }else{ echo "Todos"; } ?></span> - ID:<span class="h6"> <?= $r['id']?></span></h5>
+        <h5 class="modal-title fw-bold titulo-modal" id="edit_label">Detalles de: <span class="h6"><?= $_GET["inventario"]?></span> - Entorno: <span class="h6"><?php if (isset($link)){ echo $link; }else{ echo "Todos"; } ?></span> - ID:<span class="h6"> <?= $r['id_codigo']?></span></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -12,16 +12,21 @@
             <div class="row g-4">
                 <div class="mb-2 col-3">
                     <label for="nivel_criticidad" class="titulo-modal ">Nivel de Criticidad</label>
-                    <select type="text" id="input" name="criticidad" class="form-select form-select-sm" >
-                        <option value="<?=$r['nivel_criticidad'];?>">Elegir...</option>
+                    <select type="text" id="criticidad" name="criticidad" class="form-select form-select-sm" >
+                        <option value="<?=$v['nivel_criticidad'];?>">Elegir...</option>
                             <?php foreach($var as $v) { ?>
                         <option value="<?= $v['nivel_criticidad']?>"><?= $v['nivel_criticidad'];?></option>
                             <?php } ?>
                     </select>
                 </div>
                 <div class="mb-2 col-3">
-                    <label for="Área" class="titulo-modal">Área</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['area'];?>" name="area">
+                <label for="nivel_criticidad" class="titulo-modal ">Servicios Asociados:</label>
+                    <select type="text" id="servicios" name="servicios" class="form-select form-select-sm" >
+                        <option value="<?=$r['servicio'];?>">Elegir...</option>
+                            <?php foreach($var2 as $v) { ?>
+                        <option value="<?= $v['servicio_asociado']?>"><?= $v['servicio_asociado'];?></option>
+                            <?php } ?>
+                    </select>
                 </div>
                 <div class="mb-2 col-3" >
                     <label for="Servidor" class="titulo-modal">Servidor</label>
@@ -116,10 +121,14 @@
             </div>
         </div>
         <div class="modal-footer">
-            <input type="hidden" name="canal" value="<?= $_GET["canal"]?>">
-            <input type="hidden" name="servicio" value="<?= $_GET["servicio"]?>">
-            <input type="hidden" id="chargeId" name="id" value="<?= $r['id']?>">
-            <input type="hidden" name="regis" value="edit">
+        <input type="hidden" name="inventario" value="<?= $_GET["inventario"]?>">
+                    <input type="hidden" id="nombre" name="nombre" value="<?= $_GET['nombre']?>">
+                    <input type="hidden" id="value" name="value" value="<?= $_GET['value']?>">
+                    <input type="hidden" id="servidor" name="servidor" value="<?= $_GET['servidor']?>">
+                    <input type="hidden" id="entorno" name="entorno" value="<?= $_GET['entorno']?>">
+                    <input type="hidden" id="tipo" name="tipo" value="<?= $_GET['tipo']?>">
+                    <input type="hidden" id="id" name="id" value="<?= $r['id_codigo']?>">
+                    <input type="hidden" name="regis" value="edit">
             <button type="buttom" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
             <button type="submit" class="btn btn-outline-primary btn-sm">Guardar</button>
         </div>

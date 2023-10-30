@@ -1,5 +1,5 @@
 <?php
-    include ('../conexion/querys_resumen_inventario.php');{
+    include ('../conexion/inventario/querys_resumen_inventario.php');{
 ?>
 <section class="container-fluid">
     <div class="row">

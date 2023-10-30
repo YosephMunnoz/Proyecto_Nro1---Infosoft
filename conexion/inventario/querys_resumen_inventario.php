@@ -1,11 +1,5 @@
 <?php
 include "conex.php";
-// Total
-//  $sql ="SELECT COUNT(servidor_fisico) 
-//         FROM inventario_cco
-//         WHERE servidor_virtual = 'n/a' AND tipo = 'servidor'";
-// $result = mysqli_query($conex, $sql);
-
 
 // Vista Para Servidores Fisicos
 $sql = "SELECT * FROM servidores_fisicos";

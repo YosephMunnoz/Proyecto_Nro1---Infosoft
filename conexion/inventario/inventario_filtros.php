@@ -2,6 +2,7 @@
 include "conex.php";
 $inventario = $_GET["inventario"];
 $serv = $_GET["nombre"];
+
 if (isset($_GET['value'])) {
     switch ($_GET['value']) {
         case '1':
@@ -40,5 +41,6 @@ if (isset($_GET['value'])) {
 	}
 	mysqli_close($conex);
 }
+
 ?>
 

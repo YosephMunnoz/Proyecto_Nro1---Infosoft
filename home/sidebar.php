@@ -142,9 +142,23 @@
         </div>
     </li>
 
+    
+    <!-- Nav Item - Settings-User -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#settings" aria-expanded="true" aria-controls="settings" >
+            <i class="fas fa-tools"></i>
+            <span>Configuración</span>
+        </a>
+        <div id="settings" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Creación de Plantillas:</h6>
+                <a class="collapse-item" href="../../Infosoft3/settings/index.php?option=1">Crear Plantillas</a>
+            </div>
+        </div>
+    </li>
+    
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
-    
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>

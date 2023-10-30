@@ -16,14 +16,15 @@
                 <div id="content">
                     <?php
                         include ('../home/navbar.php');
-                        include ('../conexion/catalogo_filtros.php');
+                        include ('../conexion/catalogo/catalogo_filtros.php');
+                        include ('../conexion/plantillas.php');
                             if(isset($_GET['servicio']));
                                     switch ($_GET['servicio']) 
                                     {
                                         case 'REGISTRAR':
-                                            //pagina de TASACION
-                                            // require_once ('../CatalogoDeServicio/REGISTRAR.php');
-                                            include '../home/mantenimiento.php';
+                                            //pagina de Registrar
+                                            require_once ('../CatalogoDeServicio/REGISTRAR.php');
+                                            // include '../home/mantenimiento.php';
                                         break;
                                         case 'ACTIVACION':
                                             // Pagina Activación
