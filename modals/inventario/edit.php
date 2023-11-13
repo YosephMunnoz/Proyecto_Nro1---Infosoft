@@ -129,8 +129,8 @@
                     <input type="hidden" id="tipo" name="tipo" value="<?= $_GET['tipo']?>">
                     <input type="hidden" id="id" name="id" value="<?= $r['id_codigo']?>">
                     <input type="hidden" name="regis" value="edit">
-            <button type="buttom" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-outline-primary btn-sm">Guardar</button>
+                    <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-outline-primary">Guardar</button>
         </div>
     </form>
     </div>

@@ -215,7 +215,7 @@
             <input type="hidden" name="servicio" value="<?= $_GET["servicio"]?>">
             <input type="hidden" id="chargeId" name="id" value="<?= $r['KECS_ID']?>">
             <input type="hidden" name="regis" value="edit">
-            <button type="buttom" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
             <button type="submit" class="btn btn-outline-primary btn-sm">Guardar</button>
         </div>
     </form>

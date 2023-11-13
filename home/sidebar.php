@@ -23,6 +23,7 @@
             <span>Inicio</span>
         </a>
     </li>
+    
 
     <!-- Divider -->
     <hr class="sidebar-divider bg-white">
@@ -31,6 +32,22 @@
     <div class="sidebar-heading small"> 
         Información
     </div>
+
+     <!-- Nav Item - administrativos -->
+     <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="fas fa-fw fa-poll"></i>
+            <span>Administrativos</span>
+        </a>
+    </li>
+
+    <!-- Nav Item - areas -->
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="fas fa-fw fa-layer-group"></i>
+            <span>Áreas</span>
+        </a>
+    </li> 
 
     <!-- Nav Item - catalogo Collapse Menu -->
     <li class="nav-item">
@@ -53,23 +70,7 @@
                 <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?value=3&servicio=0">Catálogo</a>
             </div>
         </div>
-    </li>
-    
-    <!-- Nav Item - administrativos -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-poll"></i>
-            <span>Administrativos</span>
-        </a>
-    </li>
-
-    <!-- Nav Item - areas -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-layer-group"></i>
-            <span>Áreas</span>
-        </a>
-    </li>    
+    </li>   
     
     <!-- Nav Item - Documentos -->
     <li class="nav-item">
@@ -104,12 +105,27 @@
         </div>
     </li>
 
-    <!-- Nav Item - Otros -->
+    <!-- Nav Item - Tipificaciones -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#tipificaciones" aria-expanded="true" aria-controls="tipificaciones">
             <i class="fas fa-fw fa-bookmark"></i>
-            <span>Otros</span>
+            <span>Tipificaciones</span> 
         </a>
+        <div id="tipificaciones" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Instrucciones:</h6>
+                <a class="collapse-item" href="../../Infosoft3/tipificaciones/index.php?tipificaciones=1&area=">Instrucciones</a>
+                <h6 class="collapse-header">Registrar nueva matriz:</h6>
+                <a class="collapse-item" href="../../Infosoft3/Inventario/index.php?tipificaciones2=Registra&area=">Registrar</a>
+                <h6 class="collapse-header">Matriz de Tipificaciones:</h6>
+                <a class="collapse-item" href="../../Infosoft3/tipificaciones/index.php?tipificaciones=3&area=automatizacion&value=1">Automatización</a>
+                <a class="collapse-item" href="../../Infosoft3/tipificaciones/index.php?tipificaciones=3&area=backup&value=1">Backup</a>
+                <a class="collapse-item" href="../../Infosoft3/tipificaciones/index.php?tipificaciones=3&area=bbdd&value=1">Base de Datos</a>
+                <a class="collapse-item" href="../../Infosoft3/tipificaciones/index.php?tipificaciones=3&area=comunicaciones&value=1">Comunicaciones</a>
+                <a class="collapse-item" href="../../Infosoft3/tipificaciones/index.php?tipificaciones=3&area=unix&value=1">Unix</a>
+                <a class="collapse-item" href="../../Infosoft3/tipificaciones/index.php?tipificaciones=3&area=windows&value=1">Windows</a>
+            </div>
+        </div>
     </li>
 
 
@@ -199,59 +215,60 @@
         </div>
     
         <!-- Nav Item - catalogo Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#catalogo" aria-expanded="true" aria-controls="catalogo">
-                <i class="fas fa-book"></i>
-                <span>Catálogo de Servicios</span>
-            </a>
-            <div id="catalogo" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Servicios y/o Aplicativos:</h6>
-                    <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=ACTIVACION">Activación</a>
-                    <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=EMPRESARIALES">Empresariales</a>
-                    <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=FACTURACION">Facturación</a>
-                    <a type="button" class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=RECARGAS" onclick="recargas();">Recargas</a>
-                    <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=TASACION">Tasación</a>
-                    <div class="collapse-divider"></div>
-                    <h6 class="collapse-header">General:</h6>
-                    <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?value=3&servicio=0">Catálogo</a>
-                </div>
-            </div>
-        </li>
-        
-        <!-- Nav Item - administrativos -->
-        <li class="nav-item">
-            <a class="nav-link" href="#">
-                <i class="fas fa-fw fa-poll"></i>
-                <span>Administrativos</span>
-            </a>
-        </li>
-    
-        <!-- Nav Item - areas -->
-        <li class="nav-item">
-            <a class="nav-link" href="#">
-                <i class="fas fa-fw fa-layer-group"></i>
-                <span>Áreas</span>
-            </a>
-        </li>    
-        
-        <!-- Nav Item - Documentos -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
-                <i class="fas fa-fw fa-folder-open"></i>
-                <span>Documentos</span>
-            </a>
-        </li>
-        
-        <!-- Nav Item - Inventario -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#inventario" aria-expanded="true" aria-controls="inventario">
-                <i class="fas fa-fw fa-box-open"></i>
-                <span>Inventario</span>
-            </a>
-             <div id="inventario" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+       <!-- Nav Item - administrativos -->
+     <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="fas fa-fw fa-poll"></i>
+            <span>Administrativos</span>
+        </a>
+    </li>
+
+    <!-- Nav Item - areas -->
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="fas fa-fw fa-layer-group"></i>
+            <span>Áreas</span>
+        </a>
+    </li> 
+
+    <!-- Nav Item - catalogo Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#catalogo" aria-expanded="true" aria-controls="catalogo">
+            <i class="fas fa-book"></i>
+            <span>Catálogo de Servicios</span>
+        </a>
+        <div id="catalogo" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Resumen:</h6>
+                <h6 class="collapse-header">Servicios y/o Aplicativos:</h6>
+                <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=ACTIVACION">Activación</a>
+                <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=EMPRESARIALES">Empresariales</a>
+                <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=FACTURACION">Facturación</a>
+                <a type="button" class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=RECARGAS" onclick="recargas();">Recargas</a>
+                <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?servicio=TASACION">Tasación</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">General:</h6>
+                <a class="collapse-item" href="../../Infosoft3/CatalogoDeServicio/index.php?value=3&servicio=0">Catálogo</a>
+            </div>
+        </div>
+    </li>   
+    
+    <!-- Nav Item - Documentos -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+            <i class="fas fa-fw fa-folder-open"></i>
+            <span>Documentos</span>
+        </a>
+    </li>
+    
+    <!-- Nav Item - Inventario -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#inventario" aria-expanded="true" aria-controls="inventario">
+            <i class="fas fa-fw fa-box-open"></i>
+            <span>Inventario</span>
+        </a>
+        <div id="inventario" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Resumen:</h6>
                 <a class="collapse-item" href="../../Infosoft3/Inventario/index.php?inventario=Resumen&nombre=">Resumen</a>
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">Inventario CCO:</h6>
@@ -264,15 +281,28 @@
                 <a class="collapse-item" href="../../Infosoft3/Inventario/index.php?inventario=0&nombre=">Inventario CCO</a>
             </div>
         </div>
-        </li>
-    
-        <!-- Nav Item - Otros -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
-                <i class="fas fa-fw fa-bookmark"></i>
-                <span>Otros</span>
-            </a>
-        </li>
+    </li>
+
+    <!-- Nav Item - Tipificaciones -->
+    <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#tipificaciones" aria-expanded="true" aria-controls="tipificaciones">
+            <i class="fas fa-fw fa-bookmark"></i>
+            <span>Tipificaciones</span> 
+        </a>
+        <div id="tipificaciones" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Instrucciones:</h6>
+                <a class="collapse-item" href="../../Infosoft3/tipificaciones/index.php?tipificaciones=1&area=">Instrucciones</a>
+                <h6 class="collapse-header">Matriz de Tipificaciones:</h6>
+                <a class="collapse-item" href="../../Infosoft3/tipificaciones/index.php?tipificaciones=3&area=automatizacion&value=1">Automatización</a>
+                <a class="collapse-item" href="../../Infosoft3/tipificaciones/index.php?tipificaciones=3&area=backup&value=1">Backup</a>
+                <a class="collapse-item" href="../../Infosoft3/tipificaciones/index.php?tipificaciones=3&area=bbdd&value=1">Base de Datos</a>
+                <a class="collapse-item" href="../../Infosoft3/tipificaciones/index.php?tipificaciones=3&area=comunicaciones&value=1">Comunicaciones</a>
+                <a class="collapse-item" href="../../Infosoft3/tipificaciones/index.php?tipificaciones=3&area=unix&value=1">Unix</a>
+                <a class="collapse-item" href="../../Infosoft3/tipificaciones/index.php?tipificaciones=3&area=windows&value=1">Windows</a>
+            </div>
+        </div>
+    </li>
     
     
         

@@ -1,0 +1,49 @@
+<div class="container-fluid" id="scroll">
+    <div class="card shadow border-primary mb-3">
+        <div class="card-header text-primary text-uppercase h1">Instrucciones de uso (Remedy 20.02 TI):</div>
+            <div class="card-body text-primary list-group" id="texto">
+            <ol>
+                <li class="text-dark text-uppercase mb-3">
+                    El área de Gestión de incidencias adscrito a la Gerencias de Centro de Computo es quien asesora en el uso adecuado o la creación y/o Modificación de las tipificaciones ya existentes en <strong>Remedy 20.02 (TI)</strong>
+                </li>
+                <li class="text-dark text-uppercase mb-3">
+                    Tome en cuenta que las <strong>categorías Operacionales son genéricas</strong>, indican la acción a ejecutar, describe la falla, no están asociadas a un aplicativo, servicio o servidor.
+                </li>
+                <li class="text-dark text-uppercase mb-3">
+                    <strong>Las categorías Operacionales</strong> están <strong>estructuradas por Tipo de caso:</strong> Solicitudes (WO), Incidencias o Fallas (INC), Problemas (PRO) y Control de Cambio (CRQ), es decir los 3 niveles de esta categoría están estructurado por tipo de caso. Puede ver la hoja "Categoría Operacional" e identificar en las columnas desde la E hasta la I cuales pertenecen a cada tipo de caso, es decir a cada modulo.
+                    <ul class="mb-2">
+                        <li class="mb-2">Solicitud:  Se define como <strong>Solicitud de Servicio</strong> la necesidad generada por un usuario que requiere apoyo, información, un cambio en su perfil, o ajuste en su estación de trabajo.  Estas solicitudes van sobre servicios básicos NO involucra solicitud que requieran desarrollo.</li>
+                        <li class="mb-2">Inconveniente:  Este tipo de categoría <strong>involucra un INCIDENTE</strong> que presenta una herramienta, un aplicativo, un equipo pero que el usuario puede seguir trabajando en otro proceso o aplicación dentro de su ambiente de trabajo. Acá se debe identificar cuando algo no esté funcionando correctamente o que en cualquier momento podría fallar, como alguna aplicación que no esté respondiendo como de costumbre.</li>
+                        <li class="mb-2">Falla: Es una <strong>situación de alto impacto</strong> en el desarrollo de las funciones en el entorno de las herramientas de trabajo que no les permite ejecutar ninguna de las funciones.  Es decir, no puede ejecutar tarea alguna sobre su equipo, sobre una herramienta o sobre un aplicativo. </li>
+                    </ul>
+                </li>
+                <li class="text-dark text-uppercase mb-3">
+                    <strong>Las Categorías de Producto</strong> están asociados a los productos y servicios de la empresa, de existir la necesidad de modificarse (Nuevo aplicativo, sustitución, o dar de baja) lo define Arquitectura de TI, es decir solo esta área tiene ese alcance. De revisar y no encontrase acá algún aplicativo o servicio debe enviar un correo a:  XXX@telefonica.com, ellos le asesoran. 
+                </li>
+                <li class="text-dark text-uppercase mb-3">
+                    <strong>Información Requerida:</strong> deberá indicar cual es el requisito o soporte para generar el ticket, acá depende de cada caso, es decir el experto en atender el ticket debe indicas que anexo o <strong>información es necesaria para apertura el ticket.</strong> Ej.: Dirección IP, Evidencia del error o falla, Formato de solicitud, correo de autorización, entre otros.<br>
+                    <span class="text-primary">*Esta información es de tipo Informativo y procedimental, este campo no se configura en la herramienta para las tipificaciones.</span>
+                </li>
+                <li class="text-dark text-uppercase mb-3">
+                    <strong>TS que se debe aplicar:</strong> Es el Troubleshooting que el experto suministra para <strong>hacer un primer descarte o para resolver la falla.</strong> Ej.:  Reiniciar, Revisar punto de red, Eliminar cookies, probar si esta encendido el equipo, entre otros. De no existir ningún TS, indicar "Escalar a N1".<br>
+                    <span class="text-primary">*Esta información es de tipo Informativo y procedimental, este campo no se configura en la herramienta para las tipificaciones.</span>
+                </li>
+                <li class="text-dark text-uppercase mb-3">
+                    <strong>Canal de Captura:</strong> acá indicamos por lo general a donde debe dirigirse el usuario al momento de llamar o enviar un correo, si es el <strong>HELPDESK</strong> o el Centro de Computo.<br>
+                    <span class="text-primary">*Esta información es de tipo Informativo y procedimental, este campo no se configura en la herramienta para las tipificaciones.</span>
+                </li>
+                <li class="text-dark text-uppercase mb-3">
+                    <strong>Nivel de Servicio:</strong> se  indica el SLA que se tiene para atender la incidencia, falla o la solicitud, va expresado en Horas.  Si para algunos casos requiere la acción de 2 o mas grupos resolutores el SLA debe sumar los tiempos parciales de cada uno.<br>
+                    <span class="text-primary">*Esta información es de tipo Informativo y procedimental, este campo no se configura en la herramienta para las tipificaciones.</span>
+                </li>
+                <li class="text-dark text-uppercase mb-3">
+                    <strong>Campos de Grupos:</strong> Debemos indicar a que organización de soporte pertenece. La Organización es la identificación de que proceso pertenece el grupo. Se debe mantener el mínimo de grupos por gerencia ya que la tipificación de Operacional y de Producto dan suficiente información para caso. El 1er grupo a configurar es el grupo es la asignación automática que hará el sistema.<br>
+                    <span class="text-danger">OJO acá falta anexar la lista de grupos.</span>
+                </li>
+                <li class="text-dark text-uppercase mb-3">
+                    Una vez concluida y aprobada por el área solicitante las tipificaciones deberán enviar un caso de Solicitud al equipo de Soporte Remedy para que realice la configuración requerida, e involucrar al área del HELP DESK para que tengan conocimiento de esta tipificación.
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>

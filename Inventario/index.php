@@ -16,7 +16,7 @@
                 <div id="content">
                 <?php
                         include ('../home/navbar.php');
-                        include ('../conexion/inventario/inventario_filtros.php');
+                        include ('../../Infosoft3/conexion/inventario/inventario_filtros.php');
                             if(isset($_GET['inventario']));
                                     switch ($_GET['inventario']) 
                                     {

@@ -42,3 +42,14 @@ td{
 div #fisicos,#virtuales,#linux,#windows {
     display: none;
 }
+#scroll {
+	height: 600px;
+    padding-top: 15px;
+	width: auto;
+	border: 1px solid #ddd;
+	background: #4f4d4d;
+	overflow-y: scroll;
+}
+#texto {
+	height: auto;
+}
