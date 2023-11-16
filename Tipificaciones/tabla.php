@@ -2,15 +2,12 @@
 <?php 
      if(isset($_SESSION['userId']) && $_SESSION['typeId'] == 1)  {?>
 <div class="card shadow">
-    <div class="card-header lateral text-white text-uppercase text-center">
-        <p class="h3">
-            HOMOLOGACION DE TIPIFICACIONES</p>
-        <p class="h4">REMEDY 20.02</p>
-        <p class="h5">Area de:
-            <strong class="h5"> 
+    <div class="card-header text-uppercase">
+        <p class="h3 titulo obj" id="card">TIPIFICACIONES
+            <strong class="h5"> Area de:
                 <?php if(isset($_GET["area"])!= null){ echo $link; }else{echo ""; } ?>
-            </strong>
-        </p>    
+            </strong> 
+        </p> 
     </div>
     <div class="card-body small">
         <div class="table-responsive">
@@ -78,15 +75,12 @@
 </div>
 <?php } if(!isset($_SESSION['userId']) || $_SESSION['typeId'] == 2){?>
     <div class="card shadow">
-    <div class="card-header lateral text-white text-uppercase text-center">
-        <p class="h3">
-            HOMOLOGACION DE TIPIFICACIONES</p>
-        <p class="h4">REMEDY 20.02</p>
-        <p class="h5">Area de:
-            <strong class="h5"> 
+    <div class="card-header text-uppercase">
+        <p class="h3 titulo obj" id="card">TIPIFICACIONES
+            <strong class="h5"> Area de:
                 <?php if(isset($_GET["area"])!= null){ echo $link; }else{echo ""; } ?>
-            </strong>
-        </p>    
+            </strong> 
+        </p> 
     </div>
     <div class="card-body small">
         <div class="table-responsive">

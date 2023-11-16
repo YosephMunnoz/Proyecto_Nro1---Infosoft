@@ -106,7 +106,7 @@
             <input type="hidden" id="area" name="area" value="<?= $_GET['area']?>">
             <input type="hidden" id="opcion" name="opcion" value="<?= $_GET['tipificaciones']?>">
             <input type="hidden" id="id" name="id" value="<?= $r['KET_ID']?>">
-            <input type="hidden" name="regis" value="edit">
+            <input type="hidden" name="regis" value="insert">
             <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">Cancel</button>
             <button type="submit" class="btn btn-outline-primary">Guardar</button>
         </div>

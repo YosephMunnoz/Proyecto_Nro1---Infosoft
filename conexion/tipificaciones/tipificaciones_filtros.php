@@ -39,6 +39,11 @@ $sql = "SELECT KETPP3_DESCRIPTION  FROM `ke_tipificaciones_productos_3`";
 $result8 = mysqli_query($conex, $sql);
 print_r(mysqli_error($conex));
 
+$sql = "SELECT KEA_AREA  FROM `ke_areas`";
+$result9 = mysqli_query($conex, $sql);
+print_r(mysqli_error($conex));
+
+
 		
 mysqli_close($conex);
 

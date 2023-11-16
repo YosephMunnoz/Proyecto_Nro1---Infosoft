@@ -28,7 +28,7 @@
                                         break;
                                         case '2':
                                             // pagina de Registrar
-                                            include ("");
+                                            include ("registrar.php");
                                         break;
                                         case '3':
                                             // pagina de matriz

@@ -116,7 +116,7 @@
                 <h6 class="collapse-header">Instrucciones:</h6>
                 <a class="collapse-item" href="../../Infosoft3/tipificaciones/index.php?tipificaciones=1&area=">Instrucciones</a>
                 <h6 class="collapse-header">Registrar nueva matriz:</h6>
-                <a class="collapse-item" href="../../Infosoft3/Inventario/index.php?tipificaciones2=Registra&area=">Registrar</a>
+                <a class="collapse-item" href="../../Infosoft3/tipificaciones/index.php?tipificaciones=2&area=">Registrar</a>
                 <h6 class="collapse-header">Matriz de Tipificaciones:</h6>
                 <a class="collapse-item" href="../../Infosoft3/tipificaciones/index.php?tipificaciones=3&area=automatizacion&value=1">Automatización</a>
                 <a class="collapse-item" href="../../Infosoft3/tipificaciones/index.php?tipificaciones=3&area=backup&value=1">Backup</a>
