@@ -74,10 +74,21 @@
     
     <!-- Nav Item - Documentos -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Documentos" aria-expanded="true" aria-controls="Documentos">
             <i class="fas fa-fw fa-folder-open"></i>
             <span>Documentos</span>
         </a>
+        <div id="Documentos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Documentación de área:</h6>
+                <a class="collapse-item" href="../../Infosoft3/Documentos/index.php?area=automatizacion&value=1">Automatización</a>
+                <a class="collapse-item" href="../../Infosoft3/Documentos/index.php?area=backup&value=2">Backup</a>
+                <a class="collapse-item" href="../../Infosoft3/Documentos/index.php?area=bbdd&value=3">Base de Datos</a>
+                <a class="collapse-item" href="../../Infosoft3/Documentos/index.php?area=comunicaciones&value=4">Comunicaciones</a>
+                <a class="collapse-item" href="../../Infosoft3/Documentos/index.php?area=unix&value=5">Unix</a>
+                <a class="collapse-item" href="../../Infosoft3/Documentos/index.php?area=windows&value=6">Windows</a>
+            </div>
+        </div>
     </li>
     
     <!-- Nav Item - Inventario -->
@@ -254,10 +265,21 @@
     
     <!-- Nav Item - Documentos -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Documentos" aria-expanded="true" aria-controls="Documentos">
             <i class="fas fa-fw fa-folder-open"></i>
             <span>Documentos</span>
         </a>
+        <div id="Documentos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Documentación de área:</h6>
+                <a class="collapse-item" href="../../Infosoft3/Documentos/index.php?area=automatizacion&value=1">Automatización</a>
+                <a class="collapse-item" href="../../Infosoft3/Documentos/index.php?area=backup&value=1">Backup</a>
+                <a class="collapse-item" href="../../Infosoft3/Documentos/index.php?area=bbdd&value=1">Base de Datos</a>
+                <a class="collapse-item" href="../../Infosoft3/Documentos/index.php?area=comunicaciones&value=1">Comunicaciones</a>
+                <a class="collapse-item" href="../../Infosoft3/Documentos/index.php?area=unix&value=1">Unix</a>
+                <a class="collapse-item" href="../../Infosoft3/Documentos/index.php?area=windows&value=1">Windows</a>
+            </div>
+        </div>
     </li>
     
     <!-- Nav Item - Inventario -->
