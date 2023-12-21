@@ -22,7 +22,8 @@
                                     {
                                         case '1':
                                             // pagina de Registrar
-                                            require_once ('../settings/planitllas.php');
+                                            // require_once ('../settings/planitllas.php');
+                                            include '../home/mantenimiento.php';
                                             
                                         break;
                                         case '2':

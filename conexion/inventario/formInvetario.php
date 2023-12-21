@@ -1,5 +1,5 @@
 <?php
-    include 'conexion.php';
+    include '../conexion.php';
     include 'conex.php';
     session_start();
     $creationUser = "$_SESSION[user]";
@@ -18,39 +18,61 @@
                 switch ($_POST['regis'])
                 {
                     case 'insert':
-                    if(isset($_POST['name']) && $_POST['name']!='' && isset($_POST['lastName']) && $_POST['lastName']!='' && isset($_POST['CI']) && $_POST['CI']!='' && isset($_POST['email']) && $_POST['email']!='' && isset($_POST['password']) && $_POST['password']!='')
+                    if(isset($_POST['id']) && $_POST['id']!='')
                     {
-                        $name = $_POST['name'];
-                        $lastName = $_POST['lastName'];
-                        $ci = $_POST['CI'];
-                        $user = $_POST['user'];
-                        $email = $_POST['email'];
-                        $password = $_POST['password'];
-                        $charge = $_POST['charge'];
-                        $typeUser = $_POST['typeUser'];
-                        $status = $_POST['status'];      
+                        $criticidad = $_POST['nivel_criticidad'];
+                        $servicio = $_POST['servicio'];
+                        $canales = $_POST['canales'];
+                        $aplicativo = $_POST['aplicativo'];
+                        $umas = $_POST['umas'];
+                        $cluster_hypervisor = $_POST['cluster_hypervisor'];
+                        $servidor_fisico = $_POST['servidor_fisico'];
+                        $servidor_virtual = $_POST['servidor_virtual'];
+                        $conciliacion_seguridad = $_POST['conciliacion_seguridad'];
+                        $estatus_seguridad = $_POST['estatus_seguridad'];
+                        $ubicacion = $_POST['ubicacion'];
+                        $rack = $_POST['rack'];
+                        $fila = $_POST['fila'];
+                        $serial = $_POST['serial'];
+                        $direcciones_ip = $_POST['direcciones_ip'];
+                        $entorno = $_POST['entorno'];
+                        $activo_fijo = $_POST['activo_fijo'];
+                        $tipo = $_POST['tipo'];
+                        $marca = $_POST['marca'];
+                        $modelo = $_POST['modelo'];
+                        $fin_soporte = $_POST['fin_soporte'];
+                        $socket = $_POST['socket'];
+                        $cores = $_POST['cores'];
+                        $ram_gb = $_POST['ram_gb'];
+                        $sistema_operativo = $_POST['sistema_operativo'];
+                        $version_sistema_operativo = $_POST['version_sistema_operativo'];
+                        $instancia_bd = $_POST['instancia_bd'];
+                        $tipo_bd = $_POST['tipo_bd'];
+                        $vs_bd = $_POST['vs_bd'];
         
-                        $sql = "SELECT * FROM KE_USER  WHERE KEU_USER = '$user' AND KEU_EMAIL = '$email' AND KEU_PASSWORD = MD5('$password')";
+                        $sql = "SELECT * FROM inventario_cco WHERE servicio = '$servicio' AND canales =  '$canales' AND aplicativo = '$aplicativo' AND umas = '$umas'
+                        AND cluster_hypervisor = '$cluster_hypervisor' AND servidor_fisico = '$servidor_fisico' AND servidor_virtual = '$servidor_virtual' ";
                         $valida = mysqli_query($conex, $sql);
                         $num = mysqli_num_rows($valida);
                         if($num == 0 )
                         {
-                            $insert = "INSERT INTO KE_USER(KEU_NAME, KEU_LASTNAME, KEU_DOCUMENT, KEU_USER, KEU_EMAIL, KEU_PASSWORD, KEC_ID, KETU_ID, KES_ID, KEU_CREATION_DATE, KEU_CREATION_USER, KEU_UPDATE_DATE, KEU_UPDATE_USER) VALUES('$name', '$lastName', '$ci', '$user', '$email', md5('$password'), '$charge', '$typeUser','$status', NOW(), '$creationUser', NOW(), '$updateUser')";
+                            $insert = "INSERT INTO inventario_cco(criticidad,servicio,canales,aplicativo,umas,cluster_hypervisor,servidor_fisico,servidor_virtual,conciliacion_seguridad,estatus_seguridad,ubicacion,rack,fila,serial,direcciones_ip,entorno,activo_fijo,tipo,marca,modelo,fin_soporte,socket,cores,ram_gb,sistema_operativo,version_sistema_operativo,instancia_bd,tipo_bd,vs_bd,active,CREATE_DATE, CREATE_USER, UPDATE_DATE, UPDATE_USER) VALUES
+                            ('$criticidad', '$servicio', '$canales', '$aplicativo', '$umas', '$cluster_hypervisor', '$servidor_fisico', '$servidor_virtual', 'N/A', 'N/A', '$ubicacion', '$rack','$fila', '$serial', '$direcciones_ip','$entorno', '$activo_fijo', '$tipo', '$marca', '$modelo', '$fin_soporte', '$socket', '$cores', '$ram_gb', '$sistema_operativo', '$version_sistema_operativo', '$instancia_bd', '$tipo_bd', '$vs_bd', 1, NOW(), '$creationUser', NOW(), '$updateUser')";
                             $result = mysqli_query($conex, $insert);
                             
                             if($result)
                             {
                                 echo
                                 "<script> 
-                                    alert('El Usuario Fue Creado exitosamente');
-                                    location.assign('../home/index.php');
+                                    alert('El item Fue Creado exitosamente');
+                                   location.assign('../../Inventario/index.php?inventario=Registrar&nombre=');
                                 </script>";
                             }
                             else
                             {
                                 echo "<script> 
                                         alert('ha ocurrido un error, vuelva a intentar');
-                                        location.assign('../home/index.php');
+                                        location.assign('../../Inventario/index.php?inventario=Registrar&nombre=');
                                     </script>";
                             }      
                         } 
@@ -58,8 +80,8 @@
                         {
                             echo    
                                 "<script> 
-                                    alert('El Usuario ya existe');
-                                    location.assign('../home/index.php');
+                                    alert('El item ya existe');
+                                    location.assign('../../Inventario/index.php?inventario=Registrar&nombre=');
                                 </script>";
                         } 
                     mysqli_close($conex);
@@ -73,62 +95,76 @@
                         if(isset($_POST['id']) && $_POST['id']!='')
                     {
                         $id = $_POST['id'];
-                        $criticidad = $_POST['criticidad'];
-                        $area = $_POST['area'];
-                        $server = $_POST['servidor'];
-                        $ip = $_POST['ip'];
-                        $host = $_POST['host'];
-                        $sistemOpe = $_POST['sistemOper'];
-                        $vsSo = $_POST['vs_so'];
-                        $bd = $_POST['bd'];
-                        $nameBd = $_POST['nameBd'];
-                        $vsBd = $_POST['vs_bd'];
-                        $bus = $_POST['bus'];
-                        $tuxedo = $_POST['tuxedo'];
-                        $logic = $_POST['weblogic'];
-                        $f5 = $_POST['f5'];
-                        $ipf = $_POST['ipf5'];
-                        $portf = $_POST['portf5'];
-                        $pools = $_POST['pools'];
-                        $otros = $_POST['otros'];
+                        $criticidad = $_POST['nivel_criticidad'];
+                        $servicio = $_POST['servicio'];
+                        $canales = $_POST['canales'];
+                        $aplicativo = $_POST['aplicativo'];
+                        $umas = $_POST['umas'];
+                        $cluster_hypervisor = $_POST['cluster_hypervisor'];
+                        $servidor_fisico = $_POST['servidor_fisico'];
+                        $servidor_virtual = $_POST['servidor_virtual'];
+                        $conciliacion_seguridad = $_POST['conciliacion_seguridad'];
+                        $estatus_seguridad = $_POST['estatus_seguridad'];
                         $ubicacion = $_POST['ubicacion'];
                         $rack = $_POST['rack'];
                         $fila = $_POST['fila'];
-                        $general = $_POST['general'];
+                        $serial = $_POST['serial'];
+                        $direcciones_ip = $_POST['direcciones_ip'];
+                        $entorno = $_POST['entorno'];
+                        $activo_fijo = $_POST['activo_fijo'];
+                        $tipo = $_POST['tipo'];
+                        $marca = $_POST['marca'];
+                        $modelo = $_POST['modelo'];
+                        $fin_soporte = $_POST['fin_soporte'];
+                        $socket = $_POST['socket'];
+                        $cores = $_POST['cores'];
+                        $ram_gb = $_POST['ram_gb'];
+                        $sistema_operativo = $_POST['sistema_operativo'];
+                        $version_sistema_operativo = $_POST['version_sistema_operativo'];
+                        $instancia_bd = $_POST['instancia_bd'];
+                        $tipo_bd = $_POST['tipo_bd'];
+                        $vs_bd = $_POST['vs_bd'];
 
-                        $sql = "SELECT * FROM catalogo_de_servicio WHERE id = '$id'";
+                        $sql = "SELECT * FROM inventario_cco WHERE id_codigo = '$id'";
                         $valida = mysqli_query($conex, $sql);
                         $num = mysqli_num_rows($valida);
                         if($num == 1 )
                         {
-                            $update = "UPDATE `catalogo_de_servicio` 
-                            SET  nivel_criticidad = '$criticidad'
-                                ,area = '$area'
-                                ,servidor = '$server' 
-                                ,ip = '$ip'
-                                ,hostname = '$host'
-                                ,sistema_operativo = '$sistemOpe'
-                                ,vs_so = '$vsSo'
-                                ,bbdd = '$bd'
-                                ,dbms = '$nameBd'
-                                ,vs_bd = '$vsBd'
-                                ,bus = '$bus'
-                                ,capa_tuxedo = '$tuxedo'
-                                ,weblogic = '$logic'
-                                ,f5_comunicaciones = '$f5'
-                                ,ip_f5 = '$ipf'
-                                ,port_f5 = '$portf'
-                                ,pools_vs = '$pools'
-                                ,otro_servicio_asociado = '$otros'
+                            $update = "UPDATE inventario_cco 
+                            SET  criticidad = '$criticidad'
+                                ,servicio = '$servicio'
+                                ,canales = '$canales' 
+                                ,aplicativo = '$aplicativo'
+                                ,umas = '$umas'
+                                ,cluster_hypervisor = '$cluster_hypervisor'
+                                ,servidor_fisico = '$servidor_fisico'
+                                ,servidor_virtual = '$servidor_virtual'
+                                ,conciliacion_seguridad = '$conciliacion_seguridad'
+                                ,estatus_seguridad = '$estatus_seguridad'
                                 ,ubicacion = '$ubicacion'
                                 ,rack = '$rack'
                                 ,fila = '$fila'
-                                ,observacion_general = '$general'
-                                ,KECS_CREATION_DATE = NOW()
-                                ,KECS_CREATION_USER = '$creationUser'
-                                ,KECS_UPDATE_DATE = NOW()
-                                ,KECS_UPDATE_USER = '$updateUser'
-                            WHERE id = '$id'";
+                                ,serial = '$serial'
+                                ,direcciones_ip = '$direcciones_ip'
+                                ,entorno = '$entorno'
+                                ,activo_fijo = '$activo_fijo'
+                                ,tipo = '$tipo'
+                                ,marca = '$marca'
+                                ,modelo = '$modelo'
+                                ,fin_soporte = '$fin_soporte'
+                                ,socket = '$socket'
+                                ,cores = '$cores'
+                                ,ram_gb = '$ram_gb'
+                                ,sistema_operativo = '$sistema_operativo'
+                                ,version_sistema_operativo = '$version_sistema_operativo'
+                                ,instancia_bd = '$instancia_bd'
+                                ,tipo_bd = '$tipo_bd'
+                                ,vs_bd = '$vs_bd'
+                                ,CREATE_DATE = NOW()
+                                ,CREATE_USER = '$creationUser'
+                                ,UPDATE_DATE = NOW()
+                                ,UPDATE_USER = '$updateUser'
+                            WHERE id_codigo = '$id'";
                             $result = mysqli_query($conex, $update);
                             
                             if($result)
@@ -136,14 +172,14 @@
                                 echo
                                 "<script> 
                                     alert('El registro fue actualizado');
-                                    location.assign('../CatalogoDeServicio/index.php?servicio=$inventario&value=1&canal=$canal');
+                                    location.assign('../../Inventario/index.php?inventario=$inventario&nombre=$nombre&servidor=$servidor&value=$value&entorno=$entorno&tipo=$tipo');
                                 </script>";
                             }
                             else
                             {
                                 echo "<script> 
                                         alert('ha ocurrido un error, vuelva a intentar');
-                                        location.assign('../CatalogoDeServicio/index.php?servicio=$servicio&value=1&canal=$canal');
+                                        location.assign('../../Inventario/index.php?inventario=$inventario&nombre=$nombre&servidor=$servidor&value=$value&entorno=$entorno&tipo=$tipo');
                                     </script>";
                             }      
                         } 
@@ -159,21 +195,21 @@
                             $num = mysqli_num_rows($valida);
                             if($num == 1 )
                             {
-                                $delete = "DELETE FROM inventario_cco WHERE id_codigo = '$id' ";
+                                $delete = "UPDATE inventario_cco SET active = 0 WHERE id_codigo = '$id' ";
                                 $result = mysqli_query($conex, $delete);
                                 if($result)
                                 {
                                     echo
                                     "<script> 
                                         alert('El Cargo Fue Eliminado exitosamente');
-                                         location.assign('../Inventario/index.php?inventario=$inventario&nombre=$nombre&servidor=$servidor&value=$value&entorno=$entorno&tipo=$tipo');
+                                         location.assign('../../Inventario/index.php?inventario=$inventario&nombre=$nombre&servidor=$servidor&value=$value&entorno=$entorno&tipo=$tipo');
                                     </script>";
                                 }
                                 else
                                 {
                                     echo "<script> 
                                             alert('ha ocurrido un error, vuelva a intentar');
-                                            location.assign('../Inventario/index.php?inventario=$inventario&nombre=$nombre&servidor=$servidor&value=$value&entorno=$entorno&tipo=$tipo');
+                                            location.assign('../../Inventario/index.php?inventario=$inventario&nombre=$nombre&servidor=$servidor&value=$value&entorno=$entorno&tipo=$tipo');
                                         </script>";
                                 }      
                             }

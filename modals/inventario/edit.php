@@ -1,139 +1,184 @@
 <!-- Modal -->
-<div class="modal fade" id="edit<?= $r['id_codigo']?>" tabindex="-1" aria-labelledby="edit_label" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered small">
-    <div class="modal-content">
-      <div class="modal-header btn-light">
-      <?php  if($_GET["value"] == 1 || $_GET["value"] == 2 || $_GET["value"] == 3){?>
-        <h5 class="modal-title fw-bold titulo-modal" id="edit_label">Detalles de: <span class="h6"><?= $_GET["inventario"]?></span> - Entorno: <span class="h6"><?php if (isset($link)){ echo $link; }else{ echo "Todos"; } ?></span> - ID:<span class="h6"> <?= $r['id_codigo']?></span></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form method="POST" action="../../../Infosoft3/conexion/formCatalogo.php" name="form-editCatalogo">
-            <div class="row g-4">
-                <div class="mb-2 col-3">
-                    <label for="nivel_criticidad" class="titulo-modal ">Nivel de Criticidad</label>
-                    <select type="text" id="criticidad" name="criticidad" class="form-select form-select-sm" >
-                        <option value="<?=$v['nivel_criticidad'];?>">Elegir...</option>
-                            <?php foreach($var as $v) { ?>
-                        <option value="<?= $v['nivel_criticidad']?>"><?= $v['nivel_criticidad'];?></option>
-                            <?php } ?>
-                    </select>
-                </div>
-                <div class="mb-2 col-3">
-                <label for="nivel_criticidad" class="titulo-modal ">Servicios Asociados:</label>
-                    <select type="text" id="servicios" name="servicios" class="form-select form-select-sm" >
-                        <option value="<?=$r['servicio'];?>">Elegir...</option>
-                            <?php foreach($var2 as $v) { ?>
-                        <option value="<?= $v['servicio_asociado']?>"><?= $v['servicio_asociado'];?></option>
-                            <?php } ?>
-                    </select>
-                </div>
-                <div class="mb-2 col-3" >
-                    <label for="Servidor" class="titulo-modal">Servidor</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['servidor'];?>" name="servidor"> 
-                </div>
-                <div class="mb-2 col-3">
-                    <label for="ip" class="titulo-modal">Dirección IP</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['ip'];?>" name="ip">
-                </div>
+<div class="modal fade" id="edit<?= $r['id_codigo'] ?>" tabindex="-1" aria-labelledby="edit_label" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable small">
+        <div class="modal-content">
+            <div class="modal-header btn-light">
+                <?php if ($_GET["value"] == 1 || $_GET["value"] == 2 || $_GET["value"] == 3) { ?>
+                    <h5 class="modal-title fw-bold titulo-modal" id="edit_label">Editar Registro del inventario N°<span><?= $r['id_codigo'] ?></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="row g-4">
-                <div class="mb-2 col-3">
-                    <label for="Hostname" class="titulo-modal">Hostname</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['hostname'];?>" name="host">
-                </div>
-                <div class="mb-2 col-2">
-                    <label for="Sistema Operativo" class="titulo-modal">Sistema Operativo</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['sistema_operativo'];?>" name="sistemOper">
-                </div>
-                <div class="mb-2 col-5">
-                    <label for="Versión de S.O" class="titulo-modal">Versión de S.O</label>
-                    <input type="text" class="form-control form-control-sm text-center pequeño" value="<?=$r['vs_so'];?>" name="vs_so">
-                </div>
-                <div class="mb-2 col-2">
-                    <label for="Base de datos" class="titulo-modal">Base de datos</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['bbdd'];?>" name="bd">
-                </div>       
-            </div>
-            <div class="row g-4">
-                <div class="mb-2 col-3">
-                    <label for="Manejador de BD" class="titulo-modal">Manejador de BD</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['dbms'];?>" name="nameBd">
-                </div>
-                <div class="mb-2 col-3">
-                    <label for="Version de BD" class="titulo-modal">Versión de BD</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['vs_bd'];?>" name="vs_bd">
-                </div>
-                <div class="mb-2 col-3">
-                    <label for="bus" class="titulo-modal">Bus</label>
-                    <input type="text" class="form-control form-control-sm text-center pequeño" value="<?=$r['bus'];?>" name="bus">
-                </div>
-                <div class="mb-2 col-3">
-                    <label for="capa tuxedo" class="titulo-modal">Capa Tuxedo</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['capa_tuxedo'];?>" name="tuxedo">
-                </div>       
-            </div>
-            <div class="row g-5">
-                <div class="mb-2 col-3">
-                    <label for="WebLogic" class="titulo-modal">WebLogic</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['weblogic'];?>" name="weblogic">
-                </div>
-                <div class="mb-2 col-3">
-                    <label for="F5 Comunicaciones" class="titulo-modal">F5 Comunicaciones</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['f5_comunicaciones'];?>" name="f5">
-                </div>
-                <div class="mb-2 col-3">
-                    <label for="ip f5" class="titulo-modal">IP F5</label>
-                    <input type="text" class="form-control form-control-sm text-center pequeño" value="<?=$r['ip_f5'];?>" name="ipf5">
-                </div>
-                <div class="mb-2 col-3">
-                    <label for="Puerto F5" class="titulo-modal">Port F5</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['port_f5'];?>" name="portf5">
-                </div>       
-            </div>
-            <div class="row g-5">
-                <div class="mb-2 col-3">
-                    <label for="Pools Vs" class="titulo-modal">Pools/Vs</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['pools_vs'];?>" name="pools">
-                </div>
-                <div class="mb-2 col-3">
-                    <label for="otros servicios asociados" class="titulo-modal">Otros Servicios Asociados</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['otro_servicio_asociado'];?>" name="otros">
-                </div>
-                <div class="mb-2 col-3">
-                    <label for="Ubicacion" class="titulo-modal">Ubicación</label>
-                    <input type="text" class="form-control form-control-sm text-center pequeño" value="<?=$r['ubicacion'];?>" name="ubicacion">
-                </div>
-                <div class="mb-2 col-2">
-                    <label for="rack" class="titulo-modal">Rack</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['rack'];?>" name="rack">
-                </div>
-                <div class="mb-2 col-1">
-                    <label for="fila" class="titulo-modal">fila</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['fila'];?>" name="fila">
-                </div>         
-            </div>
-            <div class="row g-1">
-            <div class="mb-2 col-12">
-                <label for="observacion general" class="titulo-modal">Observación General</label>
-                    <input type="text" class="form-control form-control-sm text-center" value="<?=$r['observacion_general'];?>" name="general">
-                </div>
+            <div class="modal-body">
+                <form method="POST" action="../../../Infosoft3/conexion/inventario/formInvetario.php" name="form-editInventario">
+                    <div class="row g-2">
+                        <div class="mb-2 col-2">
+                            <label for="nivel_criticidad" class="titulo-modal ">Nivel de Criticidad</label>
+                            <input type="text" name="nivel_criticidad" class="form-control form-control-sm text-center" value="<?= $r['criticidad']; ?>" id="input_nivel_criticidad">
+                        </div>
+                        <div class="mb-2 col-10">
+                            <label for="servicio" class="titulo-modal">Servicio</label>
+                            <input type="text" name="servicio" class="form-control form-control-sm text-center" value="<?= $r['servicio']; ?>">
+                        </div>
+                    </div>
+                    <div class="row g-1">
+                        <div class="mb-2 col-12">
+                            <label for="canales" class="titulo-modal">Canales</label>
+                            <input type="text" name="canales" class="form-control form-control-sm text-center" value="<?= $r['canales']; ?>">
+                        </div>
+                    </div>
+                    <div class="row g-1">
+                        <div class="mb-2 col-12">
+                            <label for="aplicativo" class="titulo-modal">Aplicativo</label>
+                            <input type="text" name="aplicativo" class="form-control form-control-sm text-center" value="<?= $r['aplicativo']; ?>">
+                        </div>
+                    </div>
+                    <div class="row g-2">
+                        <div class="mb-2 col-6">
+                            <label for="tipo" class="titulo-modal">Tipo</label>
+                            <input type="text" name="tipo" class="form-control form-control-sm text-center" value="<?= $r['tipo']; ?>">
+                        </div>
+                        <div class="mb-2 col-6">
+                            <label for="entorno" class="titulo-modal">Entorno</label>
+                            <input type="text" name="entorno" class="form-control form-control-sm text-center" value="<?= $r['entorno']; ?>">
+                        </div>
+                    </div>
+                    <div class="row g-2">
+                        <div class="mb-2 col-6">
+                            <label for="umas" class="titulo-modal">UMAS</label>
+                            <input type="text" name="umas" class="form-control form-control-sm text-center" value="<?= $r['umas']; ?>">
+                        </div>
+                        <div class="mb-2 col-6">
+                            <label for="cluster_hypervisor" class="titulo-modal">Cluster de Hypervisor</label>
+                            <input type="text" name="cluster_hypervisor" class="form-control form-control-sm text-center" value="<?= $r['cluster_hypervisor']; ?>">
+                        </div>
+                    </div>
+
+                    <div class="row g-2">
+                        <div class="mb-2 col-6">
+                            <label for="servidor_fisico" class="titulo-modal">Servidor Fìsico</label>
+                            <input type="text" name="servidor_fisico" class="form-control form-control-sm text-center" value="<?= $r['servidor_fisico']; ?>">
+                        </div>
+                        <div class="mb-2 col-6">
+                            <label for="servidor_virtual" class="titulo-modal">Servidor Virtual</label>
+                            <input type="text" name="servidor_virtual" class="form-control form-control-sm text-center" value="<?= $r['servidor_virtual']; ?>">
+                        </div>
+                    </div>
+
+
+
+                    <div class="row g-2">
+                        <div class="mb-2 col-6">
+
+                            <input type="hidden" name="conciliacion_seguridad" class="form-control form-control-sm text-center pequeño" value="<?= $r['conciliacion_seguridad']; ?>">
+                        </div>
+                        <div class="mb-2 col-6">
+                            <input type="hidden" name="estatus_seguridad" class="form-control form-control-sm text-center" value="<?= $r['estatus_seguridad']; ?>">
+                        </div>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="mb-2 col-4">
+                            <label for="ubicacion" class="titulo-modal">Ubicación</label><span class="text-muted"> (Edificio)</span>
+                            <input type="text" name="ubicacion" class="form-control form-control-sm text-center" value="<?= $r['ubicacion']; ?>">
+                        </div>
+                        <div class="mb-2 col-4">
+                            <label for="rack" class="titulo-modal">Rack</label><span class="text-muted"> (Actual)</span>
+                            <input type="text" name="rack" class="form-control form-control-sm text-center" value="<?= $r['rack']; ?>">
+                        </div>
+                        <div class="mb-2 col-4">
+                            <label for="fila" class="titulo-modal">Fila</label>
+                            <input type="text" name="fila" class="form-control form-control-sm text-center pequeño" value="<?= $r['fila']; ?>">
+                        </div>
+                    </div>
+
+                    <div class="row g-1">
+                        <div class="mb-2 col-12">
+                            <label for="direcciones_ip" class="titulo-modal">Direcciones IP</label>
+                            <input type="text" name="direcciones_ip" class="form-control form-control-sm text-center" value="<?= $r['direcciones_ip']; ?>">
+                        </div>
+                    </div>
+
+                    <div class="row g-2">
+                        <div class="mb-2 col-6">
+                            <label for="serial" class="titulo-modal">Serial</label>
+                            <input type="text" name="serial" class="form-control form-control-sm text-center" value="<?= $r['serial']; ?>">
+                        </div>
+                        <div class="mb-2 col-6">
+                            <label for="activo_fijo" class="titulo-modal">Activo Fijo</label>
+                            <input type="text" name="activo_fijo" class="form-control form-control-sm text-center" value="<?= $r['activo_fijo']; ?>">
+                        </div>
+                    </div>
+
+                    <div class="row g-2">
+                        <div class="mb-2 col-4">
+                            <label for="marca" class="titulo-modal">Marca</label>
+                            <input type="text" name="marca" class="form-control form-control-sm text-center pequeño" value="<?= $r['marca']; ?>">
+                        </div>
+                        <div class="mb-2 col-8">
+                            <label for="modelo" class="titulo-modal">Modelo</label>
+                            <input type="text" name="modelo" class="form-control form-control-sm text-center" value="<?= $r['modelo']; ?>">
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="mb-2 col-3">
+                            <label for="fin_soporte" class="titulo-modal">Fin del Soporte</label><span class="text-muted"> (Técnico)</span>
+                            <input type="text" name="fin_soporte" class="form-control form-control-sm text-center" value="<?= $r['fin_soporte']; ?>">
+                        </div>
+                        <div class="mb-2 col-3">
+                            <label for="socket" class="titulo-modal">sockets</label><span class="text-muted"> (Procesadores físicos)</span>
+                            <input type="text" name="socket" class="form-control form-control-sm text-center" value="<?= $r['socket']; ?>">
+                        </div>
+                        <div class="mb-2 col-3">
+                            <label for="cores" class="titulo-modal">Cores</label><span class="text-muted"> (Total)</span>
+                            <input type="text" name="cores" class="form-control form-control-sm text-center" value="<?= $r['cores']; ?>">
+                        </div>
+                        <div class="mb-2 col-3">
+                            <label for="ram_gb" class="titulo-modal">Memoria Ram</label><span class="text-muted"> (GB)</span>
+                            <input type="text" name="ram_gb" class="form-control form-control-sm text-center" value="<?= $r['ram_gb']; ?>">
+                        </div>
+                    </div>
+
+                    <div class="row g-2">
+                        <div class="mb-2 col-3">
+                            <label for="sistema_operativo" class="titulo-modal">Sistema Operativo</label>
+                            <input type="text" name="sistema_operativo" class="form-control form-control-sm text-center" value="<?= $r['sistema_operativo']; ?>">
+                        </div>
+                        <div class="mb-2 col-9">
+                            <label for="version_sistema_operativo" class="titulo-modal">Versión del Sistema Operativo</label>
+                            <input type="text" name="version_sistema_operativo" class="form-control form-control-sm text-center" value="<?= $r['version_sistema_operativo']; ?>">
+                        </div>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="mb-2 col-4">
+                            <label for="instancia_bd" class="titulo-modal">Instancia de Base de Datos</label>
+                            <input type="text" name="instancia_bd" class="form-control form-control-sm text-center" value="<?= $r['instancia_bd']; ?>">
+                        </div>
+                        <div class="mb-2 col-4">
+                            <label for="tipo_bd" class="titulo-modal">Manejador de Base de Datos</label>
+                            <input type="text" name="tipo_bd" class="form-control form-control-sm text-center" value="<?= $r['tipo_bd']; ?>">
+                        </div>
+                        <div class="mb-2 col-4">
+                            <label for="vs_bd" class="titulo-modal">Versión de Base de Datos</label>
+                            <input type="text" name="vs_bd" class="form-control form-control-sm text-center" value="<?= $r['vs_bd']; ?>">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="inventario" value="<?= $_GET["inventario"] ?>">
+                        <input type="hidden" id="nombre" name="nombre" value="<?= $_GET['nombre'] ?>">
+                        <input type="hidden" id="value" name="value" value="<?= $_GET['value'] ?>">
+                        <input type="hidden" id="servidor" name="servidor" value="<?= $_GET['servidor'] ?>">
+                        <input type="hidden" id="entorno" name="entorno" value="<?= $_GET['entorno'] ?>">
+                        <input type="hidden" id="tipo" name="tipo" value="<?= $_GET['tipo'] ?>">
+                        <input type="hidden" id="id" name="id" value="<?= $r['id_codigo'] ?>">
+                        <input type="hidden" name="regis" value="edit">
+                        <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-outline-primary">Guardar</button>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="modal-footer">
-        <input type="hidden" name="inventario" value="<?= $_GET["inventario"]?>">
-                    <input type="hidden" id="nombre" name="nombre" value="<?= $_GET['nombre']?>">
-                    <input type="hidden" id="value" name="value" value="<?= $_GET['value']?>">
-                    <input type="hidden" id="servidor" name="servidor" value="<?= $_GET['servidor']?>">
-                    <input type="hidden" id="entorno" name="entorno" value="<?= $_GET['entorno']?>">
-                    <input type="hidden" id="tipo" name="tipo" value="<?= $_GET['tipo']?>">
-                    <input type="hidden" id="id" name="id" value="<?= $r['id_codigo']?>">
-                    <input type="hidden" name="regis" value="edit">
-                    <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">Cancel</button>
-            <button type="submit" class="btn btn-outline-primary">Guardar</button>
-        </div>
-    </form>
     </div>
-  </div>
 </div>
-<?php }?>
+<?php } ?>

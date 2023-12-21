@@ -228,7 +228,7 @@
             </div>
         </div>
             <input type="hidden" name="regis" value="1">
-            <input type="hidden" name="regis" value="insert">
+            <input type="hidden" name="regis" value="regis">
             <input type="hidden" name="servicio" value="<?= $_GET["servicio"]?>">
             <button type="submit" class="btn btn-primary">Registrar</button>
         </form>

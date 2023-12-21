@@ -22,8 +22,8 @@
                                     {
                                         case 'Registrar':
                                             //pagina de Registrar
-                                            // require_once ('../CatalogoDeServicio/REGISTRAR.php');
-                                            include '../home/mantenimiento.php';
+                                            require_once ('../inventario/registrar.php');
+                                            // include '../home/mantenimiento.php';
                                         break;
                                         case 'Resumen':
                                             // Pagina Inventarios Resumen

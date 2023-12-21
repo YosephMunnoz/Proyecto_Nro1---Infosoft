@@ -1,4 +1,3 @@
-<?php include ('../conexion/inventario_filtros.php');?>
 <!-- Bloque de botones filtro -->
 <div class="container-fluid">
     <div class="row mb-3">

@@ -14,17 +14,17 @@
             <table class="table table-sm table-striped text-center align-middle table-borderless tabla" width="100%" cellspacing="0" id="dataTable">
                 <thead class="table-light">
                     <tr>
-                        <th colspan="4" rowspan="3" class="table-success h5 text-uppercase text-center align-middle">Fallas tipicas</th>
-                        <th colspan="6" class="table-success h5 text-uppercase text-center">Categorias</th>
-                        <th colspan="2" rowspan="3" class="table-success h5 text-uppercase text-center align-middle">Acciones</th>
+                        <th colspan="4" rowspan="3" class="h5 text-uppercase text-white text-center align-middle bg-primary"><strong>Fallas tipicas</strong></th>
+                        <th colspan="6" class="h5 text-uppercase text-center text-white bg-primary"><strong>Categorias</strong></th>
+                        <th colspan="2" rowspan="3" class="h5 text-uppercase text-center align-middle text-white bg-primary"><strong>Acciones</strong></th>
                     </tr>
                     <tr>
-                        <th colspan="3" class="h5 text-uppercase text-center table-primary">Operación</th>
-                        <th colspan="3" class="h5 text-uppercase text-center table-primary">Producto</th>
+                        <th colspan="3" class="h5 text-uppercase text-center text-white bg-primary"><strong>Operación</strong></th>
+                        <th colspan="3" class="h5 text-uppercase text-center text-white bg-primary"><strong>Producto</strong></th>
                     </tr>
                     <tr>
-                        <th colspan="6" class="table-success h5 text-uppercase text-center">Niveles</th>
-                    </tr>                       
+                        <th colspan="6" class="h5 text-uppercase text-center text-white bg-primary"><strong>Niveles</strong></th>
+                    </tr>                                
                     <tr>
                         <th white="0.5px">id</th>
                         <th white="0.5px">N°</th>
@@ -87,17 +87,16 @@
         <table class="table table-sm table-striped text-center align-middle table-borderless tabla" width="100%" cellspacing="0" id="dataTable">
                 <thead class="table-light">
                     <tr>
-                        <th colspan="4" rowspan="3" class="table-success h5 text-uppercase text-center align-middle">Fallas tipicas</th>
-                        <th colspan="6" class="table-success h5 text-uppercase text-center">Categorias</th>
+                        <th colspan="4" rowspan="3" class="h5 text-uppercase text-white text-center align-middle bg-primary"><strong>Fallas tipicas</strong></th>
+                        <th colspan="6" class="h5 text-uppercase text-center text-white bg-primary"><strong>Categorias</strong></th>
                     </tr>
                     <tr>
-                        <th colspan="3" class="h5 text-uppercase text-center table-primary">Operación</th>
-                        <th colspan="3" class="h5 text-uppercase text-center table-primary">Producto</th>
+                        <th colspan="3" class="h5 text-uppercase text-center text-white bg-primary"><strong>Operación</strong></th>
+                        <th colspan="3" class="h5 text-uppercase text-center text-white bg-primary"><strong>Producto</strong></th>
                     </tr>
                     <tr>
-                        <th colspan="6" class="table-success h5 text-uppercase text-center">Niveles</th>
-                    </tr>                       
-                    <tr>
+                        <th colspan="6" class="h5 text-uppercase text-center text-white bg-primary"><strong>Niveles</strong></th>
+                    </tr>                        
                         <th white="0.5px">id</th>
                         <th white="0.5px">N°</th>
                         <th>Caso</th>

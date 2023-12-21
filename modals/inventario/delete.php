@@ -7,7 +7,7 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <form method="POST" action="../../../Infosoft3/conexion/formInvetario.php" name="form-deleteInventario">
+            <form method="POST" action="../../../Infosoft3/conexion/inventario/formInvetario.php" name="form-deleteInventario">
                 <div class="ms-2 row justify-content-start">
                     <label for="id" class="fs-5 col-sm-3 col-form-label"><strong>Id:</strong></label>
                     <div class="col-sm-9">
