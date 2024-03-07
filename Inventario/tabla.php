@@ -31,7 +31,7 @@
             </thead>
             <tbody class="table-group-divider">
                 <tr>
-                    <?php  if(isset($_GET["value"]) == null){ echo "No existen Datos Actualmente!"; }else { foreach ($result as $r) { ?>
+                    <?php if(isset($_GET["value"]) == null){ echo "No existen Datos Actualmente!"; }else { foreach ($result as $r) { ?>
                     <th class="text-primary align-middle " white="0.5px"><?= $r['id_codigo']?></th>
                     <td scope="col" class="table-danger text-primary align-middle" white="4px" id="colors"><?= $r['criticidad'];?></td>
                     <td class="text-primary align-middle"><?= $r['servicio']; ?></td>

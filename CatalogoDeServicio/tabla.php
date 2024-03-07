@@ -45,17 +45,17 @@
                     <td class="text-primary align-middle"><?= $r['KECT_CAPA_TUXEDO']; ?></td>
                     <td class="text-primary align-middle"><?= $r['KEW_WEBLOGIC']; ?></td>
                     <td class="text-primary align-middle"><?= $r['KEU_LOCATION']; ?></td>
-                    <td style="width: 8%;">
+                    <td >
                     <a role="button" class="d-none d-sm-inline-block btn btn-warning btn-sm icon-t" data-bs-toggle="modal" href="#detalles<?= $r['KECS_ID']?>">
                     <i class="fas fa-plus fa-sm text-white" ></i> Detalles
                     </a>
                     </td>
-                    <td style="width: 8%;">
+                    <td>
                         <a role="button" class="d-none d-sm-inline-block btn btn-primary btn-sm icon-t" data-bs-toggle="modal" href="#edit<?= $r['KECS_ID']?>">
                             <i class="fas fa-user-pen fa-sm text-white" ></i> Editar
                         </a>
                     </td>
-                    <td style="width: 8%;">
+                    <td>
                         <a role="button" class="d-none d-sm-inline-block btn btn-secondary btn-sm icon-t" data-bs-toggle="modal" href="#delete<?= $r['KECS_ID']?>">
                             <i class="fas fa-trash-alt fa-sm text-white" ></i> Eliminar
                         </a>

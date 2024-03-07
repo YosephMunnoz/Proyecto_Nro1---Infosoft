@@ -25,3 +25,13 @@ hgroup p{
     font-weight: 700;
     font-size: small; 
 }
+
+@media (min-width:300px) and (max-width:999px)
+{
+    i{
+        display: none;
+    }
+}
+.ui-datepicker-calendar {
+    display: none;
+ }

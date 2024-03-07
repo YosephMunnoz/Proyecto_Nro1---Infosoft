@@ -41,13 +41,7 @@
         </a>
     </li>
 
-    <!-- Nav Item - areas -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-layer-group"></i>
-            <span>Áreas</span>
-        </a>
-    </li> 
+  
 
     <!-- Nav Item - catalogo Collapse Menu -->
     <li class="nav-item">
@@ -115,6 +109,14 @@
             </div>
         </div>
     </li>
+
+      <!-- Nav Item - PBO -->
+      <li class="nav-item">
+      <a class="nav-link" href="../../Infosoft3/PBO/index.php?valor=">
+            <i class="fas fa-fw fa-layer-group"></i>
+            <span>PBO</span>
+        </a>
+    </li> 
 
     <!-- Nav Item - Tipificaciones -->
     <li class="nav-item">
@@ -234,14 +236,6 @@
         </a>
     </li>
 
-    <!-- Nav Item - areas -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-layer-group"></i>
-            <span>Áreas</span>
-        </a>
-    </li> 
-
     <!-- Nav Item - catalogo Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#catalogo" aria-expanded="true" aria-controls="catalogo">
@@ -304,6 +298,15 @@
             </div>
         </div>
     </li>
+
+     <!-- Nav Item - PBO -->
+     <li class="nav-item">
+        <a class="nav-link" href="../../Infosoft3/PBO/index.php?valor=">
+            <i class="fas fa-fw fa-layer-group"></i>
+            <span>PBO</span>
+        </a>
+    </li> 
+
 
     <!-- Nav Item - Tipificaciones -->
     <li class="nav-item">

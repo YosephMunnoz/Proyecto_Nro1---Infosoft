@@ -5,7 +5,6 @@
         include '../home/head.html';
     ?>
     <body id="page-top">
-
         <!-- Page Wrapper -->
         <div id="wrapper">
             <?php
@@ -15,8 +14,10 @@
                 <!-- Main Content -->
                 <div id="content">
                     <?php
-                        include '../home/navbar.php';
-                        // include '../home/mantenimiento.php';
+                        include ('../home/navbar.php');
+                        require_once ('pbo.php');
+                           
+                        // include '../home/main.php';
                         include '../modals/users/settings_session.php'
                     ?>
                 </div>
@@ -24,7 +25,7 @@
                     <?php
                         include '../home/footer.html'
                     ?>
-            </div>
+            </div>                                                                  
         </div>
        
      
@@ -35,7 +36,7 @@
 
         <!-- Logout Modal-->
         <?php
-            include_once ('../modals/users/signOut.php')
+            include ('../modals/users/signOut.php');
         ?>
     </body>
 </html>

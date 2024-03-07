@@ -15,7 +15,7 @@
             </thead>
             <tbody class="table-group-divider ">
                 <tr>
-                    <?php  if(isset($_GET["value"]) == null){ echo "No existen Datos Actualmente!"; }else { foreach ($result0 as $r) { ?>
+                <?php  if ($num == 0) {echo "No existen registros actualmente!";} else foreach ($result0 as $r) {?>
                     <th class="text-primary align-middle " white="0.5px"><?= $r['KEF_ID']?></th>
                     <td class="text-primary align-middle"><?= $r['KEF_NAME'];?></td>
                     <td class="text-primary align-middle"><?= $r['KEF_DESCRIPTION'];?></td>
@@ -24,12 +24,11 @@
                             <i class="fas fa-user-pen text-white" ></i> Ver
                         </a>
                     </td>
-                    <?php  if(isset($_SESSION['userId']) && $_SESSION['typeId'] == 1) { 
-                        echo (
-                            '<td style="width: 12%;">
+                    <?php  if(isset($_SESSION['userId']) && $_SESSION['typeId'] == 1) { ?>
+                     <td style="width: 12%;">
                         <form method="POST" action="../../../Infosoft3/conexion/Documentos/formDocumentos.php" name="form-DeleteDocumentos" enctype="multipart/form-data">
-                            <input type="hidden" id="ruta" name="ruta" value="<?= '.$r['KEF_PATCH'].'?>">
-                            <input type="hidden" name="id" value="<?= '.$r['KEF_ID'].'?>">
+                            <input type="hidden" id="ruta" name="ruta" value="<?= $r['KEF_PATCH']?>">
+                            <input type="hidden" name="id" value="<?= $r['KEF_ID'] ?>">
                             <input type="hidden" id="value" name="value" value="0">
                             <input type="hidden" id="area" name="area" value="<?= $area ?>">
                             <input type="hidden" name="regis" value="delete">
@@ -37,8 +36,7 @@
                                 <i class="fas fa-trash-alt text-white" ></i> Eliminar
                             </button>
                         </form>
-                        </td>'
-                        );} ?>
+                        </td>
                 </tr>
                 <?php } } ?>
                 <caption>Listado de Documentos</caption>

@@ -6,11 +6,11 @@
         <div class="card-body">
             <form method="POST" action="../../../Infosoft3/conexion/inventario/formInvetario.php" name="form-editInventario">
                 <div class="row g-2">
-                    <div class="mb-2 col-2">
+                    <div class="mb-2 col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
                         <label for="nivel_criticidad" class="titulo-modal ">Nivel de Criticidad</label>
                         <input type="text" name="nivel_criticidad" class="form-control form-control-sm text-center" id="input_nivel_criticidad">
                     </div>
-                    <div class="mb-2 col-10">
+                    <div class="mb-2 col-xxl-9 col-xl-9 col-lg-6 col-md-6 col-sm-12">
                         <label for="servicio" class="titulo-modal">Servicio</label>
                         <input type="text" name="servicio" class="form-control form-control-sm text-center">
                     </div>
@@ -28,56 +28,56 @@
                     </div>
                 </div>
                 <div class="row g-2">
-                    <div class="mb-2 col-6">
+                    <div class="mb-2 col-sm-12 col-lg-6 col-xl-6 col-md-6">
                         <label for="tipo" class="titulo-modal">Tipo</label>
                         <input type="text" name="tipo" class="form-control form-control-sm text-center">
                     </div>
-                    <div class="mb-2 col-6">
+                    <div class="mb-2 col-sm-12 col-lg-6 col-xl-6 col-md-6">
                         <label for="entorno" class="titulo-modal">Entorno</label>
                         <input type="text" name="entorno" class="form-control form-control-sm text-center">
                     </div>
                 </div>
                 <div class="row g-2">
-                    <div class="mb-2 col-6">
+                    <div class="mb-2 col-sm-12 col-lg-6 col-xl-6 col-md-6">
                         <label for="umas" class="titulo-modal">UMAS</label>
                         <input type="text" name="umas" class="form-control form-control-sm text-center">
                     </div>
-                    <div class="mb-2 col-6">
+                    <div class="mb-2 col-sm-12 col-lg-6 col-xl-6 col-md-6">
                         <label for="cluster_hypervisor" class="titulo-modal">Cluster de Hypervisor</label>
                         <input type="text" name="cluster_hypervisor" class="form-control form-control-sm text-center">
                     </div>
                 </div>
 
                 <div class="row g-2">
-                    <div class="mb-2 col-6">
+                    <div class="mb-2 col-sm-12 col-lg-6 col-xl-6 col-md-6">
                         <label for="servidor_fisico" class="titulo-modal">Servidor Fìsico</label>
                         <input type="text" name="servidor_fisico" class="form-control form-control-sm text-center">
                     </div>
-                    <div class="mb-2 col-6">
+                    <div class="mb-2 col-sm-12 col-lg-6 col-xl-6 col-md-6">
                         <label for="servidor_virtual" class="titulo-modal">Servidor Virtual</label>
                         <input type="text" name="servidor_virtual" class="form-control form-control-sm text-center">
                     </div>
                 </div>
                 <div class="row g-2">
-                    <div class="mb-2 col-6">
+                    <div class="mb-2 col-sm-12 col-lg-6 col-xl-6 col-md-6">
 
                         <input type="hidden" name="conciliacion_seguridad" class="form-control form-control-sm text-center pequeño">
                     </div>
-                    <div class="mb-2 col-6">
+                    <div class="mb-2 col-sm-12 col-lg-6 col-xl-6 col-md-6">
                         <input type="hidden" name="estatus_seguridad" class="form-control form-control-sm text-center">
                     </div>
                 </div>
 
                 <div class="row g-3">
-                    <div class="mb-2 col-4">
+                    <div class="mb-2 col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
                         <label for="ubicacion" class="titulo-modal">Ubicación</label><span class="text-muted"> (Edificio)</span>
                         <input type="text" name="ubicacion" class="form-control form-control-sm text-center">
                     </div>
-                    <div class="mb-2 col-4">
+                    <div class="mb-2  col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
                         <label for="rack" class="titulo-modal">Rack</label><span class="text-muted"> (Actual)</span>
                         <input type="text" name="rack" class="form-control form-control-sm text-center">
                     </div>
-                    <div class="mb-2 col-4">
+                    <div class="mb-2  col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
                         <label for="fila" class="titulo-modal">Fila</label>
                         <input type="text" name="fila" class="form-control form-control-sm text-center pequeño">
                     </div>
@@ -113,19 +113,19 @@
                 </div>
 
                 <div class="row g-4">
-                    <div class="mb-2 col-3">
+                    <div class="mb-2 col-xxl-3 col-xl-3 col-lg-6 col-md-12 col-sm-12">
                         <label for="fin_soporte" class="titulo-modal">Fin del Soporte</label><span class="text-muted"> (Técnico)</span>
                         <input type="text" name="fin_soporte" class="form-control form-control-sm text-center">
                     </div>
-                    <div class="mb-2 col-3">
+                    <div class="mb-2 col-xxl-3 col-xl-3 col-lg-6 col-md-12 col-sm-12">
                         <label for="socket" class="titulo-modal">sockets</label><span class="text-muted"> (Procesadores físicos)</span>
                         <input type="text" name="socket" class="form-control form-control-sm text-center">
                     </div>
-                    <div class="mb-2 col-3">
+                    <div class="mb-2 col-xxl-3 col-xl-3 col-lg-6 col-md-12 col-sm-12">
                         <label for="cores" class="titulo-modal">Cores</label><span class="text-muted"> (Total)</span>
                         <input type="text" name="cores" class="form-control form-control-sm text-center">
                     </div>
-                    <div class="mb-2 col-3">
+                    <div class="mb-2 col-xxl-3 col-xl-3 col-lg-6 col-md-12 col-sm-12">
                         <label for="ram_gb" class="titulo-modal">Memoria Ram</label><span class="text-muted"> (GB)</span>
                         <input type="text" name="ram_gb" class="form-control form-control-sm text-center">
                     </div>
