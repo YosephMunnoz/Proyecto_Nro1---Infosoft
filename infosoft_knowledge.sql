@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 28-11-2023 a las 12:37:30
+-- Tiempo de generación: 07-03-2024 a las 00:58:40
 -- Versión del servidor: 8.0.30
 -- Versión de PHP: 8.1.10
 
@@ -1021,10 +1021,10 @@ INSERT INTO `ke_charge` (`KEC_ID`, `KEC_CHARGE`, `KEC_ACTIVE`, `KEC_CREATION_DAT
 (3, 'Consultor', b'0', '2023-09-17 16:24:41', 'Sephyo', '2023-09-17 16:31:07', 'Sephyo'),
 (4, 'Unix', b'0', '2023-09-17 16:25:18', 'Sephyo', '2023-09-17 16:26:04', 'Sephyo'),
 (5, 'Windows', b'0', '2023-09-17 19:27:41', 'Sephyo', '2023-09-19 14:34:59', 'Sephyo'),
-(6, 'Coordinador', b'1', '2023-09-19 16:12:52', 'Sephyo', '2023-09-19 16:12:52', 'Sephyo'),
+(6, 'COORDINADOR', b'1', '2023-09-19 16:12:52', 'CarlosD', '2023-12-20 10:06:00', 'Sephyo'),
 (7, 'Consultor2', b'0', '2023-10-02 15:08:58', 'Sephyo', '2023-10-02 15:09:40', 'Sephyo'),
 (8, 'consultor3', b'0', '2023-10-02 15:10:09', 'Sephyo', '2023-10-02 15:11:11', 'Sephyo'),
-(9, 'Jefe Cco', b'1', '2023-10-02 15:38:01', 'Sephyo', '2023-10-02 15:38:01', 'Sephyo');
+(9, 'JEFE CCO', b'1', '2023-10-02 15:38:01', 'CarlosD', '2023-12-20 10:05:53', 'Sephyo');
 
 -- --------------------------------------------------------
 
@@ -1102,13 +1102,6 @@ CREATE TABLE `ke_files` (
   `KEF_UPDATE_DATE` date NOT NULL,
   `KEF_UPDATE_USER` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
-
---
--- Volcado de datos para la tabla `ke_files`
---
-
-INSERT INTO `ke_files` (`KEF_ID`, `KEF_AREA`, `KEF_NAME`, `KEF_DESCRIPTION`, `KEF_PATCH`, `KEF_FILES`, `KEF_CREATION_DATE`, `KEF_CREATION_USER`, `KEF_UPDATE_DATE`, `KEF_UPDATE_USER`) VALUES
-(3, 'windows', 'Prueba 1', 'sada', 'C:/laragon/www/Infosoft3/Documentos/files/YOSEPH MUÑOZ PLANILLA MERCANTIL EMERGENCIA SUSCRIPCION (5).pdf', 'YOSEPH MUÑOZ PLANILLA MERCANTIL EMERGENCIA SUSCRIPCION (5).pdf', '2023-11-26', 'Sephyo', '2023-11-26', 'Sephyo');
 
 -- --------------------------------------------------------
 
@@ -2268,6 +2261,25 @@ INSERT INTO `ke_otros_servicios_asociados` (`KEOSA_ID`, `KEOSA_OTHER_ASSOCIATED_
 (129, 'WEBSERVERCOL02', NULL, '2023-10-26', 'SEPHYO', '2023-10-26', 'SEPHYO'),
 (130, 'WEBSERVERVAL 02', NULL, '2023-10-26', 'SEPHYO', '2023-10-26', 'SEPHYO'),
 (131, 'WEBSERVERVAL01', NULL, '2023-10-26', 'SEPHYO', '2023-10-26', 'SEPHYO');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ke_pbo`
+--
+
+CREATE TABLE `ke_pbo` (
+  `KEP_ID` int NOT NULL,
+  `KEP_NAME` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `KEP_DESCRIPTION` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `KEP_PATCH` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `KEP_FILES` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `KEP_PERIOD` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `KEP_CREATION_DATE` datetime NOT NULL,
+  `KEP_CREATION_USER` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `KEP_UPDATE_DATE` datetime NOT NULL,
+  `KEP_UPDATE_USER` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
 -- --------------------------------------------------------
 
@@ -4149,6 +4161,14 @@ ALTER TABLE `ke_otros_servicios_asociados`
   ADD UNIQUE KEY `KEOSA_CAPA_TUXEDO` (`KEOSA_OTHER_ASSOCIATED_SERVICES`);
 
 --
+-- Indices de la tabla `ke_pbo`
+--
+ALTER TABLE `ke_pbo`
+  ADD PRIMARY KEY (`KEP_ID`),
+  ADD UNIQUE KEY `KEP_NAME` (`KEP_NAME`),
+  ADD UNIQUE KEY `KEP_FILES` (`KEP_FILES`);
+
+--
 -- Indices de la tabla `ke_pools_vs`
 --
 ALTER TABLE `ke_pools_vs`
@@ -4349,7 +4369,7 @@ ALTER TABLE `ke_f5_comunicaciones`
 -- AUTO_INCREMENT de la tabla `ke_files`
 --
 ALTER TABLE `ke_files`
-  MODIFY `KEF_ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `KEF_ID` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `ke_gestores_bases_de_datos`
@@ -4398,6 +4418,12 @@ ALTER TABLE `ke_observaciones_generales`
 --
 ALTER TABLE `ke_otros_servicios_asociados`
   MODIFY `KEOSA_ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
+
+--
+-- AUTO_INCREMENT de la tabla `ke_pbo`
+--
+ALTER TABLE `ke_pbo`
+  MODIFY `KEP_ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `ke_pools_vs`
